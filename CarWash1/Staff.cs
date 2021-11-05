@@ -2,9 +2,9 @@
 
 namespace CarWash1
 {
-    public partial class MainForm : Form
+    public partial class Staff : Form
     {
-        public MainForm()
+        public Staff()
         {
             InitializeComponent();
         }
