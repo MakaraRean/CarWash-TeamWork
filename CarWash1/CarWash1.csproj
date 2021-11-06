@@ -52,6 +52,7 @@
     <Compile Include="CreateUser.Designer.cs">
       <DependentUpon>CreateUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="DatabaseConnection.cs" />
     <Compile Include="Drink.cs">
       <SubType>Form</SubType>
     </Compile>

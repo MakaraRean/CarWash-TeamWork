@@ -75,7 +75,7 @@
             this.label1.ForeColor = System.Drawing.Color.Red;
             this.label1.Location = new System.Drawing.Point(16, 196);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 29);
+            this.label1.Size = new System.Drawing.Size(118, 37);
             this.label1.TabIndex = 2;
             this.label1.Text = "Drink ID";
             // 
@@ -105,7 +105,7 @@
             this.label2.ForeColor = System.Drawing.Color.Red;
             this.label2.Location = new System.Drawing.Point(16, 245);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(133, 29);
+            this.label2.Size = new System.Drawing.Size(165, 37);
             this.label2.TabIndex = 4;
             this.label2.Text = "Drink Name";
             // 
@@ -126,7 +126,7 @@
             this.label3.ForeColor = System.Drawing.Color.Red;
             this.label3.Location = new System.Drawing.Point(16, 295);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(107, 29);
+            this.label3.Size = new System.Drawing.Size(136, 37);
             this.label3.TabIndex = 6;
             this.label3.Text = "Stock Qty";
             // 
@@ -147,7 +147,7 @@
             this.label4.ForeColor = System.Drawing.Color.Red;
             this.label4.Location = new System.Drawing.Point(16, 347);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(63, 29);
+            this.label4.Size = new System.Drawing.Size(79, 37);
             this.label4.TabIndex = 8;
             this.label4.Text = "Price";
             // 
@@ -159,7 +159,7 @@
             this.label5.ForeColor = System.Drawing.Color.Red;
             this.label5.Location = new System.Drawing.Point(16, 398);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(111, 29);
+            this.label5.Size = new System.Drawing.Size(139, 37);
             this.label5.TabIndex = 10;
             this.label5.Text = "Cat Name";
             // 
@@ -168,7 +168,7 @@
             this.comboCatName.FormattingEnabled = true;
             this.comboCatName.Location = new System.Drawing.Point(151, 397);
             this.comboCatName.Name = "comboCatName";
-            this.comboCatName.Size = new System.Drawing.Size(223, 32);
+            this.comboCatName.Size = new System.Drawing.Size(223, 37);
             this.comboCatName.TabIndex = 11;
             // 
             // button1
@@ -242,35 +242,44 @@
             this.Column4});
             this.dataGridView1.Location = new System.Drawing.Point(422, 60);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(576, 544);
             this.dataGridView1.TabIndex = 16;
             // 
             // ID
             // 
             this.ID.HeaderText = "ID";
+            this.ID.MinimumWidth = 6;
             this.ID.Name = "ID";
             this.ID.Width = 80;
             // 
             // Column1
             // 
             this.Column1.HeaderText = "Name";
+            this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
             this.Column1.Width = 150;
             // 
             // Column2
             // 
             this.Column2.HeaderText = "Qty";
+            this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
+            this.Column2.Width = 125;
             // 
             // Column3
             // 
             this.Column3.HeaderText = "Price";
+            this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
+            this.Column3.Width = 125;
             // 
             // Column4
             // 
             this.Column4.HeaderText = "CatName";
+            this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
+            this.Column4.Width = 125;
             // 
             // label6
             // 
@@ -280,7 +289,7 @@
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(631, 3);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(152, 41);
+            this.label6.Size = new System.Drawing.Size(191, 52);
             this.label6.TabIndex = 17;
             this.label6.Text = "Drink ";
             // 
@@ -300,7 +309,7 @@
             // 
             // Drink
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(234)))), ((int)(((byte)(234)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
@@ -329,6 +338,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Drink";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
             this.Load += new System.EventHandler(this.Drink_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
