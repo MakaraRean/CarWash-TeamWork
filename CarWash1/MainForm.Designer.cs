@@ -35,7 +35,6 @@
             this.btDrink = new System.Windows.Forms.Button();
             this.btExpense = new System.Windows.Forms.Button();
             this.btIncome = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -115,15 +114,6 @@
             this.btIncome.Text = "Income";
             this.btIncome.UseVisualStyleBackColor = false;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(141, 136);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(129, 61);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
@@ -131,7 +121,6 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1004, 541);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.btIncome);
             this.Controls.Add(this.btExpense);
             this.Controls.Add(this.btDrink);
@@ -156,6 +145,5 @@
         private System.Windows.Forms.Button btDrink;
         private System.Windows.Forms.Button btExpense;
         private System.Windows.Forms.Button btIncome;
-        private System.Windows.Forms.Button button1;
     }
 }
