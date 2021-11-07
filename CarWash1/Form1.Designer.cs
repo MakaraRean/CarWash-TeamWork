@@ -73,7 +73,7 @@
             this.label1.ForeColor = System.Drawing.Color.CornflowerBlue;
             this.label1.Location = new System.Drawing.Point(503, 260);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(95, 24);
+            this.label1.Size = new System.Drawing.Size(75, 19);
             this.label1.TabIndex = 1;
             this.label1.Text = "Username";
             // 
@@ -96,7 +96,7 @@
             this.label2.ForeColor = System.Drawing.Color.CornflowerBlue;
             this.label2.Location = new System.Drawing.Point(503, 332);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 24);
+            this.label2.Size = new System.Drawing.Size(71, 19);
             this.label2.TabIndex = 3;
             this.label2.Text = "Password";
             // 
@@ -117,7 +117,7 @@
             this.txtUserName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUserName.Location = new System.Drawing.Point(520, 296);
             this.txtUserName.Name = "txtUserName";
-            this.txtUserName.Size = new System.Drawing.Size(235, 27);
+            this.txtUserName.Size = new System.Drawing.Size(235, 22);
             this.txtUserName.TabIndex = 5;
             // 
             // txtPassword
@@ -126,7 +126,7 @@
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPassword.Location = new System.Drawing.Point(520, 370);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(235, 27);
+            this.txtPassword.Size = new System.Drawing.Size(235, 22);
             this.txtPassword.TabIndex = 6;
             // 
             // label3
@@ -137,7 +137,7 @@
             this.label3.ForeColor = System.Drawing.Color.CornflowerBlue;
             this.label3.Location = new System.Drawing.Point(503, 208);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(96, 37);
+            this.label3.Size = new System.Drawing.Size(76, 29);
             this.label3.TabIndex = 7;
             this.label3.Text = "LOGIN";
             // 
@@ -214,7 +214,7 @@
             this.linkLabel1.LinkColor = System.Drawing.Color.LightSteelBlue;
             this.linkLabel1.Location = new System.Drawing.Point(668, 402);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(123, 21);
+            this.linkLabel1.Size = new System.Drawing.Size(96, 15);
             this.linkLabel1.TabIndex = 14;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "forget password";
@@ -251,7 +251,7 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -280,6 +280,7 @@
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();

@@ -74,5 +74,10 @@ namespace CarWash1
         {
             new CreateUser().ShowDialog();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
