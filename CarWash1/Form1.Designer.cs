@@ -39,7 +39,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btExit = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btNewUser = new System.Windows.Forms.Button();
             this.btLogin = new System.Windows.Forms.Button();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
@@ -166,18 +166,19 @@
             this.pictureBox4.TabIndex = 10;
             this.pictureBox4.TabStop = false;
             // 
-            // button3
+            // btNewUser
             // 
-            this.button3.BackColor = System.Drawing.Color.Red;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(697, 634);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(161, 40);
-            this.button3.TabIndex = 11;
-            this.button3.Text = "Create New User";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btNewUser.BackColor = System.Drawing.Color.Red;
+            this.btNewUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btNewUser.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btNewUser.ForeColor = System.Drawing.Color.White;
+            this.btNewUser.Location = new System.Drawing.Point(697, 634);
+            this.btNewUser.Name = "btNewUser";
+            this.btNewUser.Size = new System.Drawing.Size(161, 40);
+            this.btNewUser.TabIndex = 11;
+            this.btNewUser.Text = "Create New User";
+            this.btNewUser.UseVisualStyleBackColor = false;
+            this.btNewUser.Click += new System.EventHandler(this.btNewUser_Click);
             // 
             // btLogin
             // 
@@ -260,7 +261,7 @@
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.btLogin);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btNewUser);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.btExit);
             this.Controls.Add(this.label3);
@@ -303,7 +304,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btExit;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btNewUser;
         private System.Windows.Forms.Button btLogin;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.LinkLabel linkLabel1;

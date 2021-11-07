@@ -35,6 +35,8 @@
             this.btDrink = new System.Windows.Forms.Button();
             this.btExpense = new System.Windows.Forms.Button();
             this.btIncome = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.labelStaff = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -87,6 +89,7 @@
             this.btDrink.TabIndex = 3;
             this.btDrink.Text = "Drink";
             this.btDrink.UseVisualStyleBackColor = false;
+            this.btDrink.Click += new System.EventHandler(this.btDrink_Click);
             // 
             // btExpense
             // 
@@ -114,6 +117,27 @@
             this.btIncome.Text = "Income";
             this.btIncome.UseVisualStyleBackColor = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.Location = new System.Drawing.Point(55, 19);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(131, 29);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Staff Name";
+            // 
+            // labelStaff
+            // 
+            this.labelStaff.AutoSize = true;
+            this.labelStaff.BackColor = System.Drawing.Color.Transparent;
+            this.labelStaff.ForeColor = System.Drawing.Color.Red;
+            this.labelStaff.Location = new System.Drawing.Point(181, 19);
+            this.labelStaff.Name = "labelStaff";
+            this.labelStaff.Size = new System.Drawing.Size(0, 29);
+            this.labelStaff.TabIndex = 7;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
@@ -121,6 +145,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1004, 541);
+            this.Controls.Add(this.labelStaff);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btIncome);
             this.Controls.Add(this.btExpense);
             this.Controls.Add(this.btDrink);
@@ -133,8 +159,10 @@
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainForm";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -146,5 +174,7 @@
         private System.Windows.Forms.Button btDrink;
         private System.Windows.Forms.Button btExpense;
         private System.Windows.Forms.Button btIncome;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelStaff;
     }
 }
