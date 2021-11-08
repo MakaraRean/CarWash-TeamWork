@@ -92,6 +92,9 @@ namespace CarWash1
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
         {
             btEdit.Enabled = true;
+            namefordeleteupdate = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            qtyfordeleteupdate = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            pricefordeleteupdate = dataGridView1.CurrentRow.Cells[2].Value.ToString();
         }
 
         private void btEdit_Click(object sender, EventArgs e)
@@ -128,6 +131,31 @@ namespace CarWash1
                 GetData();
             }
             catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btDelete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DialogResult result = MessageBox.Show("Are you sure to delete?","Delete Data", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (result == DialogResult.Yes)
+                {
+                    string sql = "DELETE tbDrinks WHERE DName = '" + namefordeleteupdate + "' AND SQty=" + qtyfordeleteupdate + " AND Price=" + pricefordeleteupdate + ";";
+                    SqlCommand cmd = new SqlCommand(sql, DatabaseConnection.DataCon);
+                    cmd.ExecuteNonQuery();
+                    cmd.Dispose();
+                    MessageBox.Show("A row has been deleted");
+                    GetData();
+                }
+                else
+                {
+                    return;
+                }
+            }
+            catch(Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
