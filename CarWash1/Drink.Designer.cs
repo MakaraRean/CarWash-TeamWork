@@ -49,6 +49,7 @@
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label6 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
+            this.btExit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -82,7 +83,7 @@
             this.label2.ForeColor = System.Drawing.Color.Red;
             this.label2.Location = new System.Drawing.Point(16, 227);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(165, 37);
+            this.label2.Size = new System.Drawing.Size(133, 29);
             this.label2.TabIndex = 4;
             this.label2.Text = "Drink Name";
             // 
@@ -103,7 +104,7 @@
             this.label3.ForeColor = System.Drawing.Color.Red;
             this.label3.Location = new System.Drawing.Point(16, 277);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(136, 37);
+            this.label3.Size = new System.Drawing.Size(107, 29);
             this.label3.TabIndex = 6;
             this.label3.Text = "Stock Qty";
             // 
@@ -124,7 +125,7 @@
             this.label4.ForeColor = System.Drawing.Color.Red;
             this.label4.Location = new System.Drawing.Point(16, 329);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(79, 37);
+            this.label4.Size = new System.Drawing.Size(63, 29);
             this.label4.TabIndex = 8;
             this.label4.Text = "Price";
             // 
@@ -136,7 +137,7 @@
             this.label5.ForeColor = System.Drawing.Color.Red;
             this.label5.Location = new System.Drawing.Point(16, 380);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(139, 37);
+            this.label5.Size = new System.Drawing.Size(111, 29);
             this.label5.TabIndex = 10;
             this.label5.Text = "Cat Name";
             // 
@@ -146,7 +147,7 @@
             this.cbCatName.FormattingEnabled = true;
             this.cbCatName.Location = new System.Drawing.Point(177, 380);
             this.cbCatName.Name = "cbCatName";
-            this.cbCatName.Size = new System.Drawing.Size(223, 37);
+            this.cbCatName.Size = new System.Drawing.Size(223, 32);
             this.cbCatName.TabIndex = 11;
             // 
             // btAdd
@@ -265,7 +266,7 @@
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(631, 3);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(191, 52);
+            this.label6.Size = new System.Drawing.Size(152, 41);
             this.label6.TabIndex = 17;
             this.label6.Text = "Drink ";
             // 
@@ -283,14 +284,28 @@
             this.button5.TabIndex = 18;
             this.button5.UseVisualStyleBackColor = false;
             // 
+            // btExit
+            // 
+            this.btExit.BackColor = System.Drawing.Color.Transparent;
+            this.btExit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btExit.BackgroundImage")));
+            this.btExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btExit.FlatAppearance.BorderSize = 0;
+            this.btExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btExit.Location = new System.Drawing.Point(948, 3);
+            this.btExit.Name = "btExit";
+            this.btExit.Size = new System.Drawing.Size(50, 45);
+            this.btExit.TabIndex = 19;
+            this.btExit.UseVisualStyleBackColor = false;
+            // 
             // Drink
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(234)))), ((int)(((byte)(234)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1010, 624);
+            this.Controls.Add(this.btExit);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.dataGridView1);
@@ -343,5 +358,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.Button btExit;
     }
 }
