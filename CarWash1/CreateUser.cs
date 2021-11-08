@@ -16,5 +16,10 @@ namespace CarWash1
         {
             InitializeComponent();
         }
+
+        private void CreateUser_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -48,6 +48,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btback = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btExit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridStaff)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -259,6 +260,19 @@
             this.pictureBox2.TabIndex = 19;
             this.pictureBox2.TabStop = false;
             // 
+            // btExit
+            // 
+            this.btExit.BackColor = System.Drawing.Color.Transparent;
+            this.btExit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btExit.BackgroundImage")));
+            this.btExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btExit.FlatAppearance.BorderSize = 0;
+            this.btExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btExit.Location = new System.Drawing.Point(762, 3);
+            this.btExit.Name = "btExit";
+            this.btExit.Size = new System.Drawing.Size(50, 45);
+            this.btExit.TabIndex = 37;
+            this.btExit.UseVisualStyleBackColor = false;
+            // 
             // Staff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
@@ -266,6 +280,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(824, 579);
+            this.Controls.Add(this.btExit);
             this.Controls.Add(this.btback);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.DataGridStaff);
@@ -314,5 +329,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.Button btExit;
     }
 }

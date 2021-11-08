@@ -45,8 +45,10 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.btBack = new System.Windows.Forms.Button();
             this.btCreate = new System.Windows.Forms.Button();
+            this.btUpdate = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btDelete = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -227,31 +229,57 @@
             this.checkBox2.TabIndex = 35;
             this.checkBox2.UseVisualStyleBackColor = true;
             // 
-            // btBack
-            // 
-            this.btBack.BackColor = System.Drawing.Color.Transparent;
-            this.btBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btBack.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
-            this.btBack.ForeColor = System.Drawing.Color.Red;
-            this.btBack.Location = new System.Drawing.Point(496, 538);
-            this.btBack.Name = "btBack";
-            this.btBack.Size = new System.Drawing.Size(126, 41);
-            this.btBack.TabIndex = 37;
-            this.btBack.Text = "BACK";
-            this.btBack.UseVisualStyleBackColor = false;
-            // 
             // btCreate
             // 
             this.btCreate.BackColor = System.Drawing.Color.Transparent;
             this.btCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btCreate.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
             this.btCreate.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.btCreate.Location = new System.Drawing.Point(636, 538);
+            this.btCreate.Location = new System.Drawing.Point(496, 522);
             this.btCreate.Name = "btCreate";
             this.btCreate.Size = new System.Drawing.Size(126, 41);
-            this.btCreate.TabIndex = 36;
+            this.btCreate.TabIndex = 37;
             this.btCreate.Text = "CREATE";
             this.btCreate.UseVisualStyleBackColor = false;
+            // 
+            // btUpdate
+            // 
+            this.btUpdate.BackColor = System.Drawing.Color.Transparent;
+            this.btUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btUpdate.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
+            this.btUpdate.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.btUpdate.Location = new System.Drawing.Point(636, 522);
+            this.btUpdate.Name = "btUpdate";
+            this.btUpdate.Size = new System.Drawing.Size(126, 41);
+            this.btUpdate.TabIndex = 36;
+            this.btUpdate.Text = "UPDATE";
+            this.btUpdate.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
+            this.button1.ForeColor = System.Drawing.Color.Red;
+            this.button1.Location = new System.Drawing.Point(496, 570);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(126, 41);
+            this.button1.TabIndex = 40;
+            this.button1.Text = "BACK";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // btDelete
+            // 
+            this.btDelete.BackColor = System.Drawing.Color.Transparent;
+            this.btDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btDelete.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
+            this.btDelete.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.btDelete.Location = new System.Drawing.Point(636, 570);
+            this.btDelete.Name = "btDelete";
+            this.btDelete.Size = new System.Drawing.Size(126, 41);
+            this.btDelete.TabIndex = 39;
+            this.btDelete.Text = "DELETE";
+            this.btDelete.UseVisualStyleBackColor = false;
             // 
             // CreateUser
             // 
@@ -259,8 +287,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(873, 670);
-            this.Controls.Add(this.btBack);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btDelete);
             this.Controls.Add(this.btCreate);
+            this.Controls.Add(this.btUpdate);
             this.Controls.Add(this.checkBox2);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.label5);
@@ -278,9 +308,10 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox2);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "CreateUser";
-            this.Text = "CreateUser";
+            this.Text = " ";
+            this.Load += new System.EventHandler(this.CreateUser_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -309,7 +340,9 @@
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.Button btBack;
         private System.Windows.Forms.Button btCreate;
+        private System.Windows.Forms.Button btUpdate;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btDelete;
     }
 }
