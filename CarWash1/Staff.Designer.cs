@@ -31,23 +31,30 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Staff));
             this.label6 = new System.Windows.Forms.Label();
             this.DataGridStaff = new System.Windows.Forms.DataGridView();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btDelete = new System.Windows.Forms.Button();
             this.btEdit = new System.Windows.Forms.Button();
             this.btUpdate = new System.Windows.Forms.Button();
             this.btAdd = new System.Windows.Forms.Button();
-            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.txtPhone = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtPosition = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtID = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.btback = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.txtAddress = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtSalary = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridStaff)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -60,7 +67,7 @@
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(437, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(151, 41);
+            this.label6.Size = new System.Drawing.Size(191, 52);
             this.label6.TabIndex = 35;
             this.label6.Text = "STAFF";
             // 
@@ -70,36 +77,22 @@
             this.DataGridStaff.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
             this.Column1,
-            this.Column2});
-            this.DataGridStaff.Location = new System.Drawing.Point(417, 95);
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5});
+            this.DataGridStaff.Location = new System.Drawing.Point(446, 106);
             this.DataGridStaff.Name = "DataGridStaff";
-            this.DataGridStaff.Size = new System.Drawing.Size(395, 461);
+            this.DataGridStaff.RowHeadersWidth = 51;
+            this.DataGridStaff.Size = new System.Drawing.Size(774, 461);
             this.DataGridStaff.TabIndex = 34;
-            // 
-            // ID
-            // 
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.Width = 80;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Name";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 150;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Position";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 120;
             // 
             // btDelete
             // 
             this.btDelete.BackColor = System.Drawing.Color.Bisque;
             this.btDelete.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CadetBlue;
             this.btDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btDelete.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
+            this.btDelete.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold);
             this.btDelete.ForeColor = System.Drawing.Color.Black;
             this.btDelete.Location = new System.Drawing.Point(214, 491);
             this.btDelete.Name = "btDelete";
@@ -107,13 +100,14 @@
             this.btDelete.TabIndex = 33;
             this.btDelete.Text = "Delete";
             this.btDelete.UseVisualStyleBackColor = false;
+            this.btDelete.Click += new System.EventHandler(this.btDelete_Click);
             // 
             // btEdit
             // 
             this.btEdit.BackColor = System.Drawing.Color.Bisque;
             this.btEdit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CadetBlue;
             this.btEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btEdit.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
+            this.btEdit.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold);
             this.btEdit.ForeColor = System.Drawing.Color.Black;
             this.btEdit.Location = new System.Drawing.Point(14, 491);
             this.btEdit.Name = "btEdit";
@@ -121,13 +115,14 @@
             this.btEdit.TabIndex = 32;
             this.btEdit.Text = "Edit";
             this.btEdit.UseVisualStyleBackColor = false;
+            this.btEdit.Click += new System.EventHandler(this.btEdit_Click);
             // 
             // btUpdate
             // 
             this.btUpdate.BackColor = System.Drawing.Color.Bisque;
             this.btUpdate.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CadetBlue;
             this.btUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btUpdate.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
+            this.btUpdate.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold);
             this.btUpdate.ForeColor = System.Drawing.Color.Black;
             this.btUpdate.Location = new System.Drawing.Point(214, 429);
             this.btUpdate.Name = "btUpdate";
@@ -135,13 +130,14 @@
             this.btUpdate.TabIndex = 31;
             this.btUpdate.Text = "Update";
             this.btUpdate.UseVisualStyleBackColor = false;
+            this.btUpdate.Click += new System.EventHandler(this.btUpdate_Click);
             // 
             // btAdd
             // 
             this.btAdd.BackColor = System.Drawing.Color.Bisque;
             this.btAdd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CadetBlue;
             this.btAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btAdd.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
+            this.btAdd.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold);
             this.btAdd.ForeColor = System.Drawing.Color.Black;
             this.btAdd.Location = new System.Drawing.Point(14, 429);
             this.btAdd.Name = "btAdd";
@@ -149,32 +145,33 @@
             this.btAdd.TabIndex = 30;
             this.btAdd.Text = "Add";
             this.btAdd.UseVisualStyleBackColor = false;
+            this.btAdd.Click += new System.EventHandler(this.btAdd_Click);
             // 
-            // txtSearch
+            // txtPhone
             // 
-            this.txtSearch.BackColor = System.Drawing.Color.Bisque;
-            this.txtSearch.Location = new System.Drawing.Point(146, 358);
-            this.txtSearch.Multiline = true;
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(223, 29);
-            this.txtSearch.TabIndex = 27;
+            this.txtPhone.BackColor = System.Drawing.Color.Bisque;
+            this.txtPhone.Location = new System.Drawing.Point(146, 300);
+            this.txtPhone.Multiline = true;
+            this.txtPhone.Name = "txtPhone";
+            this.txtPhone.Size = new System.Drawing.Size(223, 29);
+            this.txtPhone.TabIndex = 27;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
+            this.label4.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(11, 358);
+            this.label4.Location = new System.Drawing.Point(11, 300);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(80, 29);
+            this.label4.Size = new System.Drawing.Size(86, 33);
             this.label4.TabIndex = 26;
-            this.label4.Text = "Search";
+            this.label4.Text = "Phone";
             // 
             // txtPosition
             // 
             this.txtPosition.BackColor = System.Drawing.Color.Bisque;
-            this.txtPosition.Location = new System.Drawing.Point(146, 306);
+            this.txtPosition.Location = new System.Drawing.Point(146, 230);
             this.txtPosition.Multiline = true;
             this.txtPosition.Name = "txtPosition";
             this.txtPosition.Size = new System.Drawing.Size(223, 29);
@@ -184,18 +181,18 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
+            this.label3.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(11, 306);
+            this.label3.Location = new System.Drawing.Point(11, 230);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(100, 29);
+            this.label3.Size = new System.Drawing.Size(113, 33);
             this.label3.TabIndex = 24;
             this.label3.Text = "Position ";
             // 
             // txtName
             // 
             this.txtName.BackColor = System.Drawing.Color.Bisque;
-            this.txtName.Location = new System.Drawing.Point(146, 256);
+            this.txtName.Location = new System.Drawing.Point(146, 195);
             this.txtName.Multiline = true;
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(223, 29);
@@ -205,34 +202,13 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
+            this.label2.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(11, 256);
+            this.label2.Location = new System.Drawing.Point(11, 195);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(123, 29);
+            this.label2.Size = new System.Drawing.Size(139, 33);
             this.label2.TabIndex = 22;
             this.label2.Text = "Staff Name";
-            // 
-            // txtID
-            // 
-            this.txtID.BackColor = System.Drawing.Color.Bisque;
-            this.txtID.Location = new System.Drawing.Point(146, 207);
-            this.txtID.Multiline = true;
-            this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(223, 29);
-            this.txtID.TabIndex = 21;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(11, 207);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(84, 29);
-            this.label1.TabIndex = 20;
-            this.label1.Text = "Staff ID";
             // 
             // btback
             // 
@@ -259,13 +235,124 @@
             this.pictureBox2.TabIndex = 19;
             this.pictureBox2.TabStop = false;
             // 
+            // txtAddress
+            // 
+            this.txtAddress.BackColor = System.Drawing.Color.Bisque;
+            this.txtAddress.Location = new System.Drawing.Point(146, 265);
+            this.txtAddress.Multiline = true;
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(223, 29);
+            this.txtAddress.TabIndex = 38;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(11, 265);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(105, 33);
+            this.label1.TabIndex = 37;
+            this.label1.Text = "Address";
+            // 
+            // txtSalary
+            // 
+            this.txtSalary.BackColor = System.Drawing.Color.Bisque;
+            this.txtSalary.Location = new System.Drawing.Point(146, 335);
+            this.txtSalary.Multiline = true;
+            this.txtSalary.Name = "txtSalary";
+            this.txtSalary.Size = new System.Drawing.Size(223, 29);
+            this.txtSalary.TabIndex = 40;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold);
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(11, 335);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(84, 33);
+            this.label5.TabIndex = 39;
+            this.label5.Text = "Salary";
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.BackColor = System.Drawing.Color.Bisque;
+            this.txtSearch.Location = new System.Drawing.Point(146, 370);
+            this.txtSearch.Multiline = true;
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(223, 29);
+            this.txtSearch.TabIndex = 42;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold);
+            this.label7.ForeColor = System.Drawing.Color.Black;
+            this.label7.Location = new System.Drawing.Point(11, 370);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(90, 33);
+            this.label7.TabIndex = 41;
+            this.label7.Text = "Search";
+            // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.MinimumWidth = 6;
+            this.ID.Name = "ID";
+            this.ID.Width = 80;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Name";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 150;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Position";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 120;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Address";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 125;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Phone";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 125;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Salary";
+            this.Column5.MinimumWidth = 6;
+            this.Column5.Name = "Column5";
+            this.Column5.Width = 125;
+            // 
             // Staff
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(824, 579);
+            this.ClientSize = new System.Drawing.Size(1239, 579);
+            this.Controls.Add(this.txtSearch);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.txtSalary);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.txtAddress);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btback);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.DataGridStaff);
@@ -273,19 +360,18 @@
             this.Controls.Add(this.btEdit);
             this.Controls.Add(this.btUpdate);
             this.Controls.Add(this.btAdd);
-            this.Controls.Add(this.txtSearch);
+            this.Controls.Add(this.txtPhone);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtPosition);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtID);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox2);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Staff";
             this.Text = "Staff";
+            this.Load += new System.EventHandler(this.Staff_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DataGridStaff)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
@@ -302,17 +388,24 @@
         private System.Windows.Forms.Button btEdit;
         private System.Windows.Forms.Button btUpdate;
         private System.Windows.Forms.Button btAdd;
-        private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.TextBox txtPhone;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtPosition;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtID;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.TextBox txtAddress;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtSalary;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
     }
 }

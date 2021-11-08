@@ -25,5 +25,10 @@ namespace CarWash1
         {
             new Drink().ShowDialog();
         }
+
+        private void btStaff_Click(object sender, System.EventArgs e)
+        {
+            new Staff().ShowDialog();
+        }
     }
 }

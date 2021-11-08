@@ -1,4 +1,6 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace CarWash1
 {
@@ -7,6 +9,139 @@ namespace CarWash1
         public Staff()
         {
             InitializeComponent();
+        }
+
+
+        private void GetData()
+        {
+            DataGridStaff.Rows.Clear();
+            int id;
+            string name;
+            string postion;
+            string address;
+            string phone;
+            double salary;
+            try
+            {
+                string sql = "SELECT * FROM tbStaffs;";
+                SqlCommand cmd = new SqlCommand(sql, DatabaseConnection.DataCon);
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    id = int.Parse(reader.GetValue(0).ToString());
+                    name = reader.GetValue(1).ToString();
+                    postion = reader.GetValue(2).ToString();
+                    address = reader.GetValue(3).ToString();
+                    phone = reader.GetValue(4).ToString();
+                    salary = double.Parse(reader.GetValue(5).ToString());
+
+                    DataGridStaff.Rows.Add(id, name, postion, address, phone, salary);
+                }
+                cmd.Dispose();
+                reader.Close();
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+           
+        }
+
+        private void ClearTextbox()
+        {
+            txtName.Clear();
+            txtPhone.Clear();
+            txtPosition.Clear();
+            txtAddress.Clear();
+            txtSalary.Clear();
+        }
+        private void Staff_Load(object sender, System.EventArgs e)
+        {
+            GetData();
+        }
+
+        private void btAdd_Click(object sender, EventArgs e)
+        {
+            string name=txtName.Text;
+            string postion=txtPosition.Text;
+            string address = txtAddress.Text;
+            string phone = txtPhone.Text;
+            double salary = double.Parse(txtSalary.Text);
+            try
+            {
+                string sql = "INSERT INTO tbStaffs (SName,Position,Address,PhoneNumber,Salary) VALUES('"+name+"','"+postion+"','"+address+"','"+phone+"',"+salary+");";
+                SqlCommand cmd = new SqlCommand(sql, DatabaseConnection.DataCon);
+                cmd.ExecuteNonQuery();
+                cmd.Dispose();
+                MessageBox.Show("A new staff has been added");
+                GetData();
+                ClearTextbox();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btEdit_Click(object sender, EventArgs e)
+        {
+                id = int.Parse(DataGridStaff.CurrentRow.Cells[0].Value.ToString());
+                txtName.Text = DataGridStaff.CurrentRow.Cells[1].Value.ToString();
+                txtPosition.Text = DataGridStaff.CurrentRow.Cells[2].Value.ToString();
+                txtAddress.Text = DataGridStaff.CurrentRow.Cells[3].Value.ToString();
+                txtPhone.Text = DataGridStaff.CurrentRow.Cells[4].Value.ToString();
+                txtSalary.Text = DataGridStaff.CurrentRow.Cells[5].Value.ToString();
+
+        }
+
+        int id;
+        private void btUpdate_Click(object sender, EventArgs e)
+        {
+            string name = txtName.Text;
+            string postion = txtPosition.Text;
+            string address = txtAddress.Text;
+            string phone = txtPhone.Text;
+            double salary = double.Parse(txtSalary.Text);
+            try
+            {
+                string sql = "UPDATE tbStaffs SET SName='" + name + "', Position='" + postion + "', Address='" + address + "', PhoneNumber='" + phone + "',Salary=" + salary + " WHERE SID=" + id + ";";
+                SqlCommand cmd = new SqlCommand(sql, DatabaseConnection.DataCon);
+                cmd.ExecuteNonQuery();
+                cmd.Dispose();
+                MessageBox.Show("A staff's data has been updated");
+                GetData();
+                ClearTextbox();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btDelete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DialogResult result = MessageBox.Show("Are you sure to remove?", "Remove staff", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (result == DialogResult.Yes)
+                {
+                    string sql = "DELETE tbStaffs WHERE SID="+id+";";
+                    SqlCommand cmd = new SqlCommand(sql, DatabaseConnection.DataCon);
+                    cmd.ExecuteNonQuery();
+                    cmd.Dispose();
+                    MessageBox.Show("A staff has been removed");
+                    GetData();
+                }
+                else
+                {
+                    return;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
