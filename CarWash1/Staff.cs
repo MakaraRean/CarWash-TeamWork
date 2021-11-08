@@ -43,9 +43,7 @@ namespace CarWash1
             }catch(Exception ex)
             {
                 MessageBox.Show(ex.Message);
-            }
-
-           
+            } 
         }
 
         private void ClearTextbox()
@@ -56,21 +54,23 @@ namespace CarWash1
             txtAddress.Clear();
             txtSalary.Clear();
         }
-        private void Staff_Load(object sender, System.EventArgs e)
+
+        int id;
+        private void Staff_Load_1(object sender, EventArgs e)
         {
             GetData();
         }
 
-        private void btAdd_Click(object sender, EventArgs e)
+        private void btAdd_Click_1(object sender, EventArgs e)
         {
-            string name=txtName.Text;
-            string postion=txtPosition.Text;
+            string name = txtName.Text;
+            string postion = txtPosition.Text;
             string address = txtAddress.Text;
             string phone = txtPhone.Text;
             double salary = double.Parse(txtSalary.Text);
             try
             {
-                string sql = "INSERT INTO tbStaffs (SName,Position,Address,PhoneNumber,Salary) VALUES('"+name+"','"+postion+"','"+address+"','"+phone+"',"+salary+");";
+                string sql = "INSERT INTO tbStaffs (SName,Position,Address,PhoneNumber,Salary) VALUES('" + name + "','" + postion + "','" + address + "','" + phone + "'," + salary + ");";
                 SqlCommand cmd = new SqlCommand(sql, DatabaseConnection.DataCon);
                 cmd.ExecuteNonQuery();
                 cmd.Dispose();
@@ -78,25 +78,13 @@ namespace CarWash1
                 GetData();
                 ClearTextbox();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
         }
 
-        private void btEdit_Click(object sender, EventArgs e)
-        {
-                id = int.Parse(DataGridStaff.CurrentRow.Cells[0].Value.ToString());
-                txtName.Text = DataGridStaff.CurrentRow.Cells[1].Value.ToString();
-                txtPosition.Text = DataGridStaff.CurrentRow.Cells[2].Value.ToString();
-                txtAddress.Text = DataGridStaff.CurrentRow.Cells[3].Value.ToString();
-                txtPhone.Text = DataGridStaff.CurrentRow.Cells[4].Value.ToString();
-                txtSalary.Text = DataGridStaff.CurrentRow.Cells[5].Value.ToString();
-
-        }
-
-        int id;
-        private void btUpdate_Click(object sender, EventArgs e)
+        private void btUpdate_Click_1(object sender, EventArgs e)
         {
             string name = txtName.Text;
             string postion = txtPosition.Text;
@@ -113,20 +101,30 @@ namespace CarWash1
                 GetData();
                 ClearTextbox();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
         }
 
-        private void btDelete_Click(object sender, EventArgs e)
+        private void btEdit_Click_1(object sender, EventArgs e)
+        {
+            id = int.Parse(DataGridStaff.CurrentRow.Cells[0].Value.ToString());
+            txtName.Text = DataGridStaff.CurrentRow.Cells[1].Value.ToString();
+            txtPosition.Text = DataGridStaff.CurrentRow.Cells[2].Value.ToString();
+            txtAddress.Text = DataGridStaff.CurrentRow.Cells[3].Value.ToString();
+            txtPhone.Text = DataGridStaff.CurrentRow.Cells[4].Value.ToString();
+            txtSalary.Text = DataGridStaff.CurrentRow.Cells[5].Value.ToString();
+        }
+
+        private void btDelete_Click_1(object sender, EventArgs e)
         {
             try
             {
                 DialogResult result = MessageBox.Show("Are you sure to remove?", "Remove staff", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (result == DialogResult.Yes)
                 {
-                    string sql = "DELETE tbStaffs WHERE SID="+id+";";
+                    string sql = "DELETE tbStaffs WHERE SID=" + id + ";";
                     SqlCommand cmd = new SqlCommand(sql, DatabaseConnection.DataCon);
                     cmd.ExecuteNonQuery();
                     cmd.Dispose();
