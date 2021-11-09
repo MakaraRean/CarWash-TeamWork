@@ -46,6 +46,7 @@
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.btAuthentication = new System.Windows.Forms.Button();
+            this.btConnectToDatabase = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -73,7 +74,7 @@
             this.label1.ForeColor = System.Drawing.Color.CornflowerBlue;
             this.label1.Location = new System.Drawing.Point(503, 260);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 19);
+            this.label1.Size = new System.Drawing.Size(95, 24);
             this.label1.TabIndex = 1;
             this.label1.Text = "Username";
             // 
@@ -96,7 +97,7 @@
             this.label2.ForeColor = System.Drawing.Color.CornflowerBlue;
             this.label2.Location = new System.Drawing.Point(503, 332);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 19);
+            this.label2.Size = new System.Drawing.Size(89, 24);
             this.label2.TabIndex = 3;
             this.label2.Text = "Password";
             // 
@@ -117,7 +118,7 @@
             this.txtUserName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUserName.Location = new System.Drawing.Point(520, 296);
             this.txtUserName.Name = "txtUserName";
-            this.txtUserName.Size = new System.Drawing.Size(235, 22);
+            this.txtUserName.Size = new System.Drawing.Size(235, 27);
             this.txtUserName.TabIndex = 5;
             // 
             // txtPassword
@@ -126,7 +127,7 @@
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPassword.Location = new System.Drawing.Point(520, 370);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(235, 22);
+            this.txtPassword.Size = new System.Drawing.Size(235, 27);
             this.txtPassword.TabIndex = 6;
             // 
             // label3
@@ -137,7 +138,7 @@
             this.label3.ForeColor = System.Drawing.Color.CornflowerBlue;
             this.label3.Location = new System.Drawing.Point(503, 208);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(76, 29);
+            this.label3.Size = new System.Drawing.Size(96, 37);
             this.label3.TabIndex = 7;
             this.label3.Text = "LOGIN";
             // 
@@ -159,9 +160,9 @@
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox4.Image = global::CarWash1.Properties.Resources.Shape_03;
-            this.pictureBox4.Location = new System.Drawing.Point(612, 596);
+            this.pictureBox4.Location = new System.Drawing.Point(618, 596);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(251, 111);
+            this.pictureBox4.Size = new System.Drawing.Size(245, 111);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 10;
             this.pictureBox4.TabStop = false;
@@ -214,7 +215,7 @@
             this.linkLabel1.LinkColor = System.Drawing.Color.LightSteelBlue;
             this.linkLabel1.Location = new System.Drawing.Point(668, 402);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(96, 15);
+            this.linkLabel1.Size = new System.Drawing.Size(123, 21);
             this.linkLabel1.TabIndex = 14;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "forget password";
@@ -249,13 +250,28 @@
             this.btAuthentication.UseVisualStyleBackColor = false;
             this.btAuthentication.Click += new System.EventHandler(this.btAuthentication_Click);
             // 
+            // btConnectToDatabase
+            // 
+            this.btConnectToDatabase.BackColor = System.Drawing.Color.Transparent;
+            this.btConnectToDatabase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btConnectToDatabase.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold);
+            this.btConnectToDatabase.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.btConnectToDatabase.Location = new System.Drawing.Point(456, 653);
+            this.btConnectToDatabase.Name = "btConnectToDatabase";
+            this.btConnectToDatabase.Size = new System.Drawing.Size(176, 41);
+            this.btConnectToDatabase.TabIndex = 18;
+            this.btConnectToDatabase.Text = "Connect to Database";
+            this.btConnectToDatabase.UseVisualStyleBackColor = false;
+            this.btConnectToDatabase.Click += new System.EventHandler(this.btConnectToDatabase_Click);
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(862, 706);
+            this.Controls.Add(this.btConnectToDatabase);
             this.Controls.Add(this.btAuthentication);
             this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.pictureBox6);
@@ -312,6 +328,7 @@
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Button btAuthentication;
+        private System.Windows.Forms.Button btConnectToDatabase;
     }
 }
 
