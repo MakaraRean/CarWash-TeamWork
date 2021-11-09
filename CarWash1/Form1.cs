@@ -79,5 +79,14 @@ namespace CarWash1
         {
 
         }
+
+        private void btConnectToDatabase_Click(object sender, EventArgs e)
+        {
+            string database = "dbCarWash";
+            string server = "DESKTOP-JG5UF03\\MAKARA";
+
+            DatabaseConnection.ConnectDatabase(server, database);
+            MessageBox.Show("Connect to database successfully");
+        }
     }
 }
