@@ -288,6 +288,7 @@
             this.btDelete.TabIndex = 39;
             this.btDelete.Text = "DELETE";
             this.btDelete.UseVisualStyleBackColor = false;
+            this.btDelete.Click += new System.EventHandler(this.btDelete_Click);
             // 
             // DataGridUser
             // 

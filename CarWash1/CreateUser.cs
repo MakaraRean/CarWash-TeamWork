@@ -257,5 +257,30 @@ namespace CarWash1
             }
   
         }
+
+        private void btDelete_Click(object sender, EventArgs e)
+        {
+            string id = DataGridUser.CurrentRow.Cells[0].Value.ToString();
+            try
+            {
+                DialogResult result = MessageBox.Show("Are you sure to delete this user?", "Delete user", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    string sql = "DELETE tbUsers WHERE UID=" + id + ";";
+                    SqlCommand cmd = new SqlCommand(sql, DatabaseConnection.DataCon);
+                    cmd.ExecuteNonQuery();
+                    cmd.Dispose();
+                    GetData();
+                }
+                else
+                {
+                    return;
+                }
+                
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }
