@@ -34,6 +34,9 @@
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btDelete = new System.Windows.Forms.Button();
             this.btEdit = new System.Windows.Forms.Button();
             this.btUpdate = new System.Windows.Forms.Button();
@@ -47,9 +50,6 @@
             this.btback = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btExit = new System.Windows.Forms.Button();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtPhone = new System.Windows.Forms.TextBox();
@@ -68,7 +68,7 @@
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(437, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(191, 52);
+            this.label6.Size = new System.Drawing.Size(151, 41);
             this.label6.TabIndex = 35;
             this.label6.Text = "STAFF";
             // 
@@ -85,7 +85,11 @@
             this.DataGridStaff.Location = new System.Drawing.Point(417, 95);
             this.DataGridStaff.Name = "DataGridStaff";
             this.DataGridStaff.RowHeadersWidth = 51;
+<<<<<<< HEAD
             this.DataGridStaff.Size = new System.Drawing.Size(776, 461);
+=======
+            this.DataGridStaff.Size = new System.Drawing.Size(779, 461);
+>>>>>>> Chhay
             this.DataGridStaff.TabIndex = 34;
             // 
             // ID
@@ -108,6 +112,27 @@
             this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
             this.Column2.Width = 120;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Address";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 125;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Phone";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 125;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Salary";
+            this.Column5.MinimumWidth = 6;
+            this.Column5.Name = "Column5";
+            this.Column5.Width = 125;
             // 
             // btDelete
             // 
@@ -186,7 +211,7 @@
             this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(11, 378);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(90, 33);
+            this.label4.Size = new System.Drawing.Size(73, 27);
             this.label4.TabIndex = 26;
             this.label4.Text = "Search";
             // 
@@ -207,7 +232,7 @@
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(11, 238);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(113, 33);
+            this.label3.Size = new System.Drawing.Size(92, 27);
             this.label3.TabIndex = 24;
             this.label3.Text = "Position ";
             // 
@@ -228,7 +253,7 @@
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(11, 203);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(139, 33);
+            this.label2.Size = new System.Drawing.Size(113, 27);
             this.label2.TabIndex = 22;
             this.label2.Text = "Staff Name";
             // 
@@ -270,27 +295,6 @@
             this.btExit.TabIndex = 37;
             this.btExit.UseVisualStyleBackColor = false;
             // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Address";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 125;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Phone";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 125;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Salary";
-            this.Column5.MinimumWidth = 6;
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 125;
-            // 
             // txtAddress
             // 
             this.txtAddress.BackColor = System.Drawing.Color.Bisque;
@@ -308,7 +312,7 @@
             this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(11, 273);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(105, 33);
+            this.label5.Size = new System.Drawing.Size(86, 27);
             this.label5.TabIndex = 38;
             this.label5.Text = "Address";
             // 
@@ -329,7 +333,7 @@
             this.label7.ForeColor = System.Drawing.Color.Black;
             this.label7.Location = new System.Drawing.Point(11, 308);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(86, 33);
+            this.label7.Size = new System.Drawing.Size(71, 27);
             this.label7.TabIndex = 40;
             this.label7.Text = "Phone";
             // 
@@ -350,17 +354,21 @@
             this.label8.ForeColor = System.Drawing.Color.Black;
             this.label8.Location = new System.Drawing.Point(11, 343);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(84, 33);
+            this.label8.Size = new System.Drawing.Size(67, 27);
             this.label8.TabIndex = 42;
             this.label8.Text = "Salary";
             // 
             // Staff
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(1203, 579);
+=======
+            this.ClientSize = new System.Drawing.Size(1205, 579);
+>>>>>>> Chhay
             this.Controls.Add(this.txtSalary);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtPhone);
