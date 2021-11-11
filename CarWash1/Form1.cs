@@ -32,19 +32,24 @@ namespace CarWash1
                 SqlDataReader reader = cmd.ExecuteReader();
                 if (reader.Read())
                 {
-                    userID = reader.GetValue(2).ToString();
+                    userID = reader.GetValue(3).ToString();
                     cmd.Dispose();
                     reader.Close();
-                    string sql1 = "SELECT SName FROM tbStaffs WHERE SID = " + userID + ";";
+                    string sql1 = "SELECT SName,Position FROM tbStaffs WHERE SID = " + userID + ";";
                     SqlCommand cmd1 = new SqlCommand(sql1, DatabaseConnection.DataCon);
                     SqlDataReader reader1 = cmd1.ExecuteReader();
                     if (reader1.Read())
                     {
-                        staffName = reader1.GetValue(0).ToString();
+                        staffName = "User : "+reader1.GetValue(0).ToString()+" ("+reader1.GetValue(1).ToString()+")";
                         cmd1.Dispose();
                         reader1.Close();
                         this.Hide();
                         new MainForm(staffName).Show();
+                        MessageBox.Show("Done");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Don't");
                     }
                     
                 }
