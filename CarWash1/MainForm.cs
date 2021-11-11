@@ -18,7 +18,7 @@ namespace CarWash1
 
         private void MainForm_Load(object sender, System.EventArgs e)
         {
-            labelStaff.Text = staff;
+            //labelStaff.Text = staff;
         }
 
         private void btDrink_Click(object sender, System.EventArgs e)
