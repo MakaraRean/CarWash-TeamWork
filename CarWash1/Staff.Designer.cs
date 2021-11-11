@@ -85,11 +85,11 @@
             this.DataGridStaff.Location = new System.Drawing.Point(417, 95);
             this.DataGridStaff.Name = "DataGridStaff";
             this.DataGridStaff.RowHeadersWidth = 51;
-<<<<<<< HEAD
+
             this.DataGridStaff.Size = new System.Drawing.Size(776, 461);
-=======
+
             this.DataGridStaff.Size = new System.Drawing.Size(779, 461);
->>>>>>> Chhay
+
             this.DataGridStaff.TabIndex = 34;
             // 
             // ID
@@ -364,11 +364,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-<<<<<<< HEAD
+
             this.ClientSize = new System.Drawing.Size(1203, 579);
-=======
+
             this.ClientSize = new System.Drawing.Size(1205, 579);
->>>>>>> Chhay
+
             this.Controls.Add(this.txtSalary);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtPhone);
