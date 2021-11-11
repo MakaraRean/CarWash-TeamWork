@@ -45,12 +45,11 @@ namespace CarWash1
                         cmd1.Dispose();
                         reader1.Close();
                         this.Hide();
-                        new MainForm(staffName).Show();
-                        MessageBox.Show("Done");
+                        new MainForm(staffName,userID).Show();
                     }
                     else
                     {
-                        MessageBox.Show("Don't");
+
                     }
                     
                 }

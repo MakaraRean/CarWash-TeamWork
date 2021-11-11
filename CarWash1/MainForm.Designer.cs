@@ -104,6 +104,7 @@
             this.btExpense.TabIndex = 4;
             this.btExpense.Text = "Expense ";
             this.btExpense.UseVisualStyleBackColor = false;
+            this.btExpense.Click += new System.EventHandler(this.btExpense_Click);
             // 
             // btIncome
             // 
