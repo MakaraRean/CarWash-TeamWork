@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data.SqlClient;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace CarWash1
@@ -92,6 +93,28 @@ namespace CarWash1
 
             DatabaseConnection.ConnectDatabase(server, database);
             MessageBox.Show("Connect to database successfully");
+        }
+
+        //Use i to coun for %2
+        int i = 0;
+        private void pictureBoxShowPassword_Click(object sender, EventArgs e)
+        {
+            Bitmap bitmapShow = Properties.Resources.ShowPass1;
+            Bitmap bitmapHide = Properties.Resources.HidePass;
+            
+            if (i%2==0)
+            {
+                txtPassword.UseSystemPasswordChar = false;
+                pictureBoxShowPassword.Image = bitmapHide;
+                i++;
+                
+            }
+            else
+            {
+                txtPassword.UseSystemPasswordChar = true;
+                pictureBoxShowPassword.Image = bitmapShow;
+                i++;
+            }
         }
     }
 }

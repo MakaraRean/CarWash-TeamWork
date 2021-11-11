@@ -103,9 +103,39 @@ namespace CarWash1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap HidePass {
+            get {
+                object obj = ResourceManager.GetObject("HidePass", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Shape_03 {
             get {
                 object obj = ResourceManager.GetObject("Shape-03", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ShowPass {
+            get {
+                object obj = ResourceManager.GetObject("ShowPass", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ShowPass1 {
+            get {
+                object obj = ResourceManager.GetObject("ShowPass1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

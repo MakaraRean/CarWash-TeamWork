@@ -43,8 +43,7 @@
             this.btLogin = new System.Windows.Forms.Button();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxShowPassword = new System.Windows.Forms.PictureBox();
             this.btAuthentication = new System.Windows.Forms.Button();
             this.btConnectToDatabase = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -52,8 +51,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxShowPassword)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -129,6 +127,7 @@
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(235, 27);
             this.txtPassword.TabIndex = 6;
+            this.txtPassword.UseSystemPasswordChar = true;
             // 
             // label3
             // 
@@ -220,21 +219,18 @@
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "forget password";
             // 
-            // pictureBox6
+            // pictureBoxShowPassword
             // 
-            this.pictureBox6.Location = new System.Drawing.Point(783, 362);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox6.TabIndex = 15;
-            this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Location = new System.Drawing.Point(820, 362);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox7.TabIndex = 16;
-            this.pictureBox7.TabStop = false;
+            this.pictureBoxShowPassword.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxShowPassword.Image = global::CarWash1.Properties.Resources.ShowPass1;
+            this.pictureBoxShowPassword.Location = new System.Drawing.Point(783, 362);
+            this.pictureBoxShowPassword.Name = "pictureBoxShowPassword";
+            this.pictureBoxShowPassword.Size = new System.Drawing.Size(30, 30);
+            this.pictureBoxShowPassword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxShowPassword.TabIndex = 15;
+            this.pictureBoxShowPassword.TabStop = false;
+            this.pictureBoxShowPassword.Tag = "";
+            this.pictureBoxShowPassword.Click += new System.EventHandler(this.pictureBoxShowPassword_Click);
             // 
             // btAuthentication
             // 
@@ -273,8 +269,7 @@
             this.ClientSize = new System.Drawing.Size(862, 706);
             this.Controls.Add(this.btConnectToDatabase);
             this.Controls.Add(this.btAuthentication);
-            this.Controls.Add(this.pictureBox7);
-            this.Controls.Add(this.pictureBox6);
+            this.Controls.Add(this.pictureBoxShowPassword);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.btLogin);
             this.Controls.Add(this.btNewUser);
@@ -302,8 +297,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxShowPassword)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -325,8 +319,7 @@
         private System.Windows.Forms.Button btLogin;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.PictureBox pictureBoxShowPassword;
         private System.Windows.Forms.Button btAuthentication;
         private System.Windows.Forms.Button btConnectToDatabase;
     }
