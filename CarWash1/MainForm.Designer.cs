@@ -63,6 +63,7 @@
             this.btSales.TabIndex = 1;
             this.btSales.Text = "Sales";
             this.btSales.UseVisualStyleBackColor = false;
+            this.btSales.Click += new System.EventHandler(this.btSales_Click);
             // 
             // btStaff
             // 

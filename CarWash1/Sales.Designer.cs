@@ -87,7 +87,7 @@
             this.txtDrink.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDrink.Location = new System.Drawing.Point(658, 57);
             this.txtDrink.Name = "txtDrink";
-            this.txtDrink.Size = new System.Drawing.Size(230, 24);
+            this.txtDrink.Size = new System.Drawing.Size(230, 29);
             this.txtDrink.TabIndex = 1;
             // 
             // txtQty
@@ -97,7 +97,7 @@
             this.txtQty.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtQty.Location = new System.Drawing.Point(658, 125);
             this.txtQty.Name = "txtQty";
-            this.txtQty.Size = new System.Drawing.Size(230, 24);
+            this.txtQty.Size = new System.Drawing.Size(230, 29);
             this.txtQty.TabIndex = 2;
             // 
             // button1
@@ -162,6 +162,7 @@
             this.Column5});
             this.dataGridView1.Location = new System.Drawing.Point(322, 243);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(576, 322);
             this.dataGridView1.TabIndex = 9;
             // 
@@ -170,12 +171,14 @@
             this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column1.FillWeight = 240.4488F;
             this.Column1.HeaderText = "Product Name";
+            this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
             // 
             // Column2
             // 
             this.Column2.FillWeight = 203.0457F;
             this.Column2.HeaderText = "Qty";
+            this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
             this.Column2.Width = 90;
             // 
@@ -183,19 +186,25 @@
             // 
             this.Column3.FillWeight = 18.83516F;
             this.Column3.HeaderText = "Price ";
+            this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
+            this.Column3.Width = 125;
             // 
             // Column4
             // 
             this.Column4.FillWeight = 18.83516F;
             this.Column4.HeaderText = "Type";
+            this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
+            this.Column4.Width = 125;
             // 
             // Column5
             // 
             this.Column5.FillWeight = 18.83516F;
             this.Column5.HeaderText = "Amount";
+            this.Column5.MinimumWidth = 6;
             this.Column5.Name = "Column5";
+            this.Column5.Width = 125;
             // 
             // button3
             // 
@@ -254,7 +263,7 @@
             this.labelCar.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCar.Location = new System.Drawing.Point(333, 28);
             this.labelCar.Name = "labelCar";
-            this.labelCar.Size = new System.Drawing.Size(72, 19);
+            this.labelCar.Size = new System.Drawing.Size(88, 24);
             this.labelCar.TabIndex = 14;
             this.labelCar.Text = "Car Type";
             // 
@@ -265,7 +274,7 @@
             this.label2.Font = new System.Drawing.Font("Bahnschrift", 12F);
             this.label2.Location = new System.Drawing.Point(333, 100);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(42, 19);
+            this.label2.Size = new System.Drawing.Size(51, 24);
             this.label2.TabIndex = 15;
             this.label2.Text = "Type";
             // 
@@ -276,7 +285,7 @@
             this.labelDrink.Font = new System.Drawing.Font("Bahnschrift", 12F);
             this.labelDrink.Location = new System.Drawing.Point(690, 28);
             this.labelDrink.Name = "labelDrink";
-            this.labelDrink.Size = new System.Drawing.Size(67, 19);
+            this.labelDrink.Size = new System.Drawing.Size(83, 24);
             this.labelDrink.TabIndex = 16;
             this.labelDrink.Text = "Drink ID";
             // 
@@ -287,7 +296,7 @@
             this.label4.Font = new System.Drawing.Font("Bahnschrift", 12F);
             this.label4.Location = new System.Drawing.Point(690, 97);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(33, 19);
+            this.label4.Size = new System.Drawing.Size(40, 24);
             this.label4.TabIndex = 17;
             this.label4.Text = "Qty";
             // 
@@ -295,20 +304,21 @@
             // 
             this.txtTotalAmount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
             this.txtTotalAmount.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTotalAmount.Enabled = false;
             this.txtTotalAmount.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTotalAmount.Location = new System.Drawing.Point(683, 605);
             this.txtTotalAmount.Name = "txtTotalAmount";
-            this.txtTotalAmount.Size = new System.Drawing.Size(205, 24);
+            this.txtTotalAmount.Size = new System.Drawing.Size(205, 29);
             this.txtTotalAmount.TabIndex = 18;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Bahnschrift SemiBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(548, 604);
+            this.label5.Font = new System.Drawing.Font("Bahnschrift SemiBold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(513, 605);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(121, 23);
+            this.label5.Size = new System.Drawing.Size(155, 29);
             this.label5.TabIndex = 19;
             this.label5.Text = "Total Amount";
             // 
@@ -331,7 +341,7 @@
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(161)))), ((int)(((byte)(29)))));
             this.label6.Location = new System.Drawing.Point(11, 180);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(135, 43);
+            this.label6.Size = new System.Drawing.Size(172, 54);
             this.label6.TabIndex = 37;
             this.label6.Text = "SALES";
             // 
@@ -343,7 +353,7 @@
             this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(17, 241);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(159, 19);
+            this.label7.Size = new System.Drawing.Size(196, 24);
             this.label7.TabIndex = 38;
             this.label7.Text = "Improve your image,";
             // 
@@ -355,7 +365,7 @@
             this.label8.ForeColor = System.Drawing.Color.White;
             this.label8.Location = new System.Drawing.Point(26, 266);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(93, 19);
+            this.label8.Size = new System.Drawing.Size(114, 24);
             this.label8.TabIndex = 39;
             this.label8.Text = "wash Today";
             // 
@@ -367,7 +377,7 @@
             this.comboCar.FormattingEnabled = true;
             this.comboCar.Location = new System.Drawing.Point(333, 54);
             this.comboCar.Name = "comboCar";
-            this.comboCar.Size = new System.Drawing.Size(231, 31);
+            this.comboCar.Size = new System.Drawing.Size(231, 37);
             this.comboCar.TabIndex = 40;
             // 
             // comboType
@@ -378,7 +388,7 @@
             this.comboType.FormattingEnabled = true;
             this.comboType.Location = new System.Drawing.Point(333, 122);
             this.comboType.Name = "comboType";
-            this.comboType.Size = new System.Drawing.Size(231, 31);
+            this.comboType.Size = new System.Drawing.Size(231, 37);
             this.comboType.TabIndex = 41;
             // 
             // checkDrink
@@ -386,7 +396,7 @@
             this.checkDrink.AutoSize = true;
             this.checkDrink.Location = new System.Drawing.Point(678, 31);
             this.checkDrink.Name = "checkDrink";
-            this.checkDrink.Size = new System.Drawing.Size(15, 14);
+            this.checkDrink.Size = new System.Drawing.Size(18, 17);
             this.checkDrink.TabIndex = 42;
             this.checkDrink.UseVisualStyleBackColor = true;
             this.checkDrink.CheckedChanged += new System.EventHandler(this.checkDrink_CheckedChanged);
@@ -476,7 +486,7 @@
             // 
             // Sales
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(919, 661);

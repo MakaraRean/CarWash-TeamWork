@@ -57,5 +57,10 @@ namespace CarWash1
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void btSales_Click(object sender, EventArgs e)
+        {
+            new Sales().Show();
+        }
     }
 }
