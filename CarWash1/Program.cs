@@ -13,7 +13,7 @@ namespace CarWash1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Expense());
+            Application.Run(new Sales());
         }
     }
 }
