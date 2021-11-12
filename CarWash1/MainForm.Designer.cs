@@ -131,6 +131,7 @@
             this.btLogout.Size = new System.Drawing.Size(55, 37);
             this.btLogout.TabIndex = 20;
             this.btLogout.UseVisualStyleBackColor = false;
+            this.btLogout.Click += new System.EventHandler(this.btLogout_Click);
             // 
             // labelStaff
             // 

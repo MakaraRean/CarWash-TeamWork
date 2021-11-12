@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Windows.Forms;
 
 namespace CarWash1
 {
@@ -35,6 +36,26 @@ namespace CarWash1
         private void btExpense_Click(object sender, System.EventArgs e)
         {
             new Expense(userID).ShowDialog();
+        }
+
+        private void btLogout_Click(object sender, System.EventArgs e)
+        {
+            try
+            {
+                DialogResult result = MessageBox.Show("Are you sure to log out?", "Log out", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    this.Dispose();
+                    new Form1().Show();
+                }
+                else
+                {
+                    return;
+                }
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
