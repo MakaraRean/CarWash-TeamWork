@@ -65,7 +65,6 @@
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.pictureCar2 = new System.Windows.Forms.PictureBox();
             this.pictureDrink2 = new System.Windows.Forms.PictureBox();
-            this.button5 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -475,22 +474,12 @@
             this.pictureDrink2.TabStop = false;
             this.pictureDrink2.Click += new System.EventHandler(this.pictureDrink2_Click);
             // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(567, 16);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 42);
-            this.button5.TabIndex = 50;
-            this.button5.Text = "button5";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
             // Sales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(919, 661);
-            this.Controls.Add(this.button5);
             this.Controls.Add(this.checkDrink);
             this.Controls.Add(this.comboType);
             this.Controls.Add(this.comboCar);
@@ -583,6 +572,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.Button button5;
     }
 }
