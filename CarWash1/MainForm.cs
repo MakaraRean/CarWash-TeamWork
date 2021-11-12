@@ -60,7 +60,7 @@ namespace CarWash1
 
         private void btSales_Click(object sender, EventArgs e)
         {
-            new Sales().Show();
+            new Sales(userID).Show();
         }
     }
 }

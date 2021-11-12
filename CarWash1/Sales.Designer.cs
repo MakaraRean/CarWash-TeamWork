@@ -31,9 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Sales));
             this.txtDrink = new System.Windows.Forms.TextBox();
             this.txtQty = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btAdd = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btRemove = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,12 +41,11 @@
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btUpdate = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.button4 = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.labelCar = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.labelDrink = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtTotalAmount = new System.Windows.Forms.TextBox();
@@ -56,12 +55,10 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.comboCar = new System.Windows.Forms.ComboBox();
-            this.comboType = new System.Windows.Forms.ComboBox();
             this.checkDrink = new System.Windows.Forms.CheckBox();
             this.pictureDrink = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureCar = new System.Windows.Forms.PictureBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.pictureCar2 = new System.Windows.Forms.PictureBox();
             this.pictureDrink2 = new System.Windows.Forms.PictureBox();
@@ -74,7 +71,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureDrink)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureCar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureCar2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureDrink2)).BeginInit();
@@ -95,23 +91,24 @@
             this.txtQty.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
             this.txtQty.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtQty.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtQty.Location = new System.Drawing.Point(658, 125);
+            this.txtQty.Location = new System.Drawing.Point(491, 126);
             this.txtQty.Name = "txtQty";
             this.txtQty.Size = new System.Drawing.Size(230, 29);
             this.txtQty.TabIndex = 2;
             // 
-            // button1
+            // btAdd
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(144)))), ((int)(((byte)(255)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.button1.Location = new System.Drawing.Point(337, 180);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(115, 34);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "ADD";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(144)))), ((int)(((byte)(255)))));
+            this.btAdd.FlatAppearance.BorderSize = 0;
+            this.btAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btAdd.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
+            this.btAdd.Location = new System.Drawing.Point(337, 180);
+            this.btAdd.Name = "btAdd";
+            this.btAdd.Size = new System.Drawing.Size(115, 34);
+            this.btAdd.TabIndex = 5;
+            this.btAdd.Text = "ADD";
+            this.btAdd.UseVisualStyleBackColor = false;
+            this.btAdd.Click += new System.EventHandler(this.btAdd_Click);
             // 
             // pictureBox1
             // 
@@ -125,18 +122,19 @@
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
-            // button2
+            // btRemove
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(144)))), ((int)(((byte)(255)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.button2.Location = new System.Drawing.Point(758, 180);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(115, 34);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "REMOVE";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btRemove.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(144)))), ((int)(((byte)(255)))));
+            this.btRemove.FlatAppearance.BorderSize = 0;
+            this.btRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btRemove.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
+            this.btRemove.Location = new System.Drawing.Point(758, 180);
+            this.btRemove.Name = "btRemove";
+            this.btRemove.Size = new System.Drawing.Size(115, 34);
+            this.btRemove.TabIndex = 7;
+            this.btRemove.Text = "REMOVE";
+            this.btRemove.UseVisualStyleBackColor = false;
+            this.btRemove.Click += new System.EventHandler(this.btRemove_Click);
             // 
             // pictureBox2
             // 
@@ -160,7 +158,7 @@
             this.Column3,
             this.Column4,
             this.Column5});
-            this.dataGridView1.Location = new System.Drawing.Point(322, 243);
+            this.dataGridView1.Location = new System.Drawing.Point(322, 241);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(576, 322);
@@ -206,18 +204,19 @@
             this.Column5.Name = "Column5";
             this.Column5.Width = 125;
             // 
-            // button3
+            // btUpdate
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(144)))), ((int)(((byte)(255)))));
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.button3.Location = new System.Drawing.Point(552, 180);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(115, 34);
-            this.button3.TabIndex = 10;
-            this.button3.Text = "UPDATE";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(144)))), ((int)(((byte)(255)))));
+            this.btUpdate.FlatAppearance.BorderSize = 0;
+            this.btUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btUpdate.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
+            this.btUpdate.Location = new System.Drawing.Point(552, 180);
+            this.btUpdate.Name = "btUpdate";
+            this.btUpdate.Size = new System.Drawing.Size(115, 34);
+            this.btUpdate.TabIndex = 10;
+            this.btUpdate.Text = "EDIT";
+            this.btUpdate.UseVisualStyleBackColor = false;
+            this.btUpdate.Click += new System.EventHandler(this.btUpdate_Click);
             // 
             // pictureBox3
             // 
@@ -267,17 +266,6 @@
             this.labelCar.TabIndex = 14;
             this.labelCar.Text = "Car Type";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Bahnschrift", 12F);
-            this.label2.Location = new System.Drawing.Point(333, 100);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 24);
-            this.label2.TabIndex = 15;
-            this.label2.Text = "Type";
-            // 
             // labelDrink
             // 
             this.labelDrink.AutoSize = true;
@@ -294,7 +282,7 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Bahnschrift", 12F);
-            this.label4.Location = new System.Drawing.Point(690, 97);
+            this.label4.Location = new System.Drawing.Point(487, 95);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(40, 24);
             this.label4.TabIndex = 17;
@@ -372,6 +360,7 @@
             // comboCar
             // 
             this.comboCar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
+            this.comboCar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboCar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboCar.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboCar.FormattingEnabled = true;
@@ -379,17 +368,6 @@
             this.comboCar.Name = "comboCar";
             this.comboCar.Size = new System.Drawing.Size(231, 37);
             this.comboCar.TabIndex = 40;
-            // 
-            // comboType
-            // 
-            this.comboType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
-            this.comboType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboType.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboType.FormattingEnabled = true;
-            this.comboType.Location = new System.Drawing.Point(333, 122);
-            this.comboType.Name = "comboType";
-            this.comboType.Size = new System.Drawing.Size(231, 37);
-            this.comboType.TabIndex = 41;
             // 
             // checkDrink
             // 
@@ -417,7 +395,7 @@
             // 
             this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(648, 118);
+            this.pictureBox7.Location = new System.Drawing.Point(481, 119);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(250, 42);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -436,18 +414,6 @@
             this.pictureCar.TabIndex = 45;
             this.pictureCar.TabStop = false;
             this.pictureCar.Click += new System.EventHandler(this.pictureCar_Click);
-            // 
-            // pictureBox9
-            // 
-            this.pictureBox9.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
-            this.pictureBox9.Location = new System.Drawing.Point(322, 118);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(250, 42);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox9.TabIndex = 46;
-            this.pictureBox9.TabStop = false;
-            this.pictureBox9.Click += new System.EventHandler(this.pictureBox9_Click);
             // 
             // pictureBox10
             // 
@@ -489,9 +455,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(919, 661);
+            this.ClientSize = new System.Drawing.Size(917, 661);
             this.Controls.Add(this.checkDrink);
-            this.Controls.Add(this.comboType);
             this.Controls.Add(this.comboCar);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -501,29 +466,28 @@
             this.Controls.Add(this.txtTotalAmount);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.labelDrink);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.labelCar);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btUpdate);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btRemove);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btAdd);
             this.Controls.Add(this.txtQty);
             this.Controls.Add(this.txtDrink);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureDrink);
             this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.pictureCar);
-            this.Controls.Add(this.pictureBox9);
             this.Controls.Add(this.pictureBox10);
             this.Controls.Add(this.pictureCar2);
             this.Controls.Add(this.pictureDrink2);
             this.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.Name = "Sales";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sales";
             this.Load += new System.EventHandler(this.Sales_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -535,7 +499,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureDrink)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureCar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureCar2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureDrink2)).EndInit();
@@ -548,17 +511,16 @@
 
         private System.Windows.Forms.TextBox txtDrink;
         private System.Windows.Forms.TextBox txtQty;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btAdd;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btRemove;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btUpdate;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label labelCar;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label labelDrink;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtTotalAmount;
@@ -568,12 +530,10 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox comboCar;
-        private System.Windows.Forms.ComboBox comboType;
         private System.Windows.Forms.CheckBox checkDrink;
         private System.Windows.Forms.PictureBox pictureDrink;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox pictureCar;
-        private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.PictureBox pictureCar2;
         private System.Windows.Forms.PictureBox pictureDrink2;
