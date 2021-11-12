@@ -36,6 +36,11 @@
             this.button2 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button3 = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.button4 = new System.Windows.Forms.Button();
@@ -60,11 +65,7 @@
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.pictureCar2 = new System.Windows.Forms.PictureBox();
             this.pictureDrink2 = new System.Windows.Forms.PictureBox();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button5 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -164,6 +165,38 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(576, 322);
             this.dataGridView1.TabIndex = 9;
+            // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column1.FillWeight = 240.4488F;
+            this.Column1.HeaderText = "Product Name";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.FillWeight = 203.0457F;
+            this.Column2.HeaderText = "Qty";
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 90;
+            // 
+            // Column3
+            // 
+            this.Column3.FillWeight = 18.83516F;
+            this.Column3.HeaderText = "Price ";
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.FillWeight = 18.83516F;
+            this.Column4.HeaderText = "Type";
+            this.Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            this.Column5.FillWeight = 18.83516F;
+            this.Column5.HeaderText = "Amount";
+            this.Column5.Name = "Column5";
             // 
             // button3
             // 
@@ -442,37 +475,14 @@
             this.pictureDrink2.TabStop = false;
             this.pictureDrink2.Click += new System.EventHandler(this.pictureDrink2_Click);
             // 
-            // Column1
+            // button5
             // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column1.FillWeight = 240.4488F;
-            this.Column1.HeaderText = "Product Name";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.FillWeight = 203.0457F;
-            this.Column2.HeaderText = "Qty";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 90;
-            // 
-            // Column3
-            // 
-            this.Column3.FillWeight = 18.83516F;
-            this.Column3.HeaderText = "Price ";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.FillWeight = 18.83516F;
-            this.Column4.HeaderText = "Type";
-            this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            this.Column5.FillWeight = 18.83516F;
-            this.Column5.HeaderText = "Amount";
-            this.Column5.Name = "Column5";
+            this.button5.Location = new System.Drawing.Point(567, 16);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 42);
+            this.button5.TabIndex = 50;
+            this.button5.Text = "button5";
+            this.button5.UseVisualStyleBackColor = true;
             // 
             // Sales
             // 
@@ -480,6 +490,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(919, 661);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.checkDrink);
             this.Controls.Add(this.comboType);
             this.Controls.Add(this.comboCar);
@@ -572,5 +583,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.Button button5;
     }
 }
