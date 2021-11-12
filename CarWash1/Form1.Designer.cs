@@ -43,16 +43,15 @@
             this.btLogin = new System.Windows.Forms.Button();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxShowPassword = new System.Windows.Forms.PictureBox();
             this.btAuthentication = new System.Windows.Forms.Button();
+            this.btConnectToDatabase = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxShowPassword)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -73,7 +72,7 @@
             this.label1.ForeColor = System.Drawing.Color.CornflowerBlue;
             this.label1.Location = new System.Drawing.Point(503, 260);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 19);
+            this.label1.Size = new System.Drawing.Size(95, 24);
             this.label1.TabIndex = 1;
             this.label1.Text = "Username";
             // 
@@ -96,7 +95,7 @@
             this.label2.ForeColor = System.Drawing.Color.CornflowerBlue;
             this.label2.Location = new System.Drawing.Point(503, 332);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 19);
+            this.label2.Size = new System.Drawing.Size(89, 24);
             this.label2.TabIndex = 3;
             this.label2.Text = "Password";
             // 
@@ -117,7 +116,7 @@
             this.txtUserName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUserName.Location = new System.Drawing.Point(520, 296);
             this.txtUserName.Name = "txtUserName";
-            this.txtUserName.Size = new System.Drawing.Size(235, 22);
+            this.txtUserName.Size = new System.Drawing.Size(235, 27);
             this.txtUserName.TabIndex = 5;
             // 
             // txtPassword
@@ -126,8 +125,9 @@
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPassword.Location = new System.Drawing.Point(520, 370);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(235, 22);
+            this.txtPassword.Size = new System.Drawing.Size(235, 27);
             this.txtPassword.TabIndex = 6;
+            this.txtPassword.UseSystemPasswordChar = true;
             // 
             // label3
             // 
@@ -137,7 +137,7 @@
             this.label3.ForeColor = System.Drawing.Color.CornflowerBlue;
             this.label3.Location = new System.Drawing.Point(503, 208);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(76, 29);
+            this.label3.Size = new System.Drawing.Size(96, 37);
             this.label3.TabIndex = 7;
             this.label3.Text = "LOGIN";
             // 
@@ -159,9 +159,9 @@
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox4.Image = global::CarWash1.Properties.Resources.Shape_03;
-            this.pictureBox4.Location = new System.Drawing.Point(612, 596);
+            this.pictureBox4.Location = new System.Drawing.Point(618, 596);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(251, 111);
+            this.pictureBox4.Size = new System.Drawing.Size(245, 111);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 10;
             this.pictureBox4.TabStop = false;
@@ -214,26 +214,23 @@
             this.linkLabel1.LinkColor = System.Drawing.Color.LightSteelBlue;
             this.linkLabel1.Location = new System.Drawing.Point(668, 402);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(96, 15);
+            this.linkLabel1.Size = new System.Drawing.Size(123, 21);
             this.linkLabel1.TabIndex = 14;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "forget password";
             // 
-            // pictureBox6
+            // pictureBoxShowPassword
             // 
-            this.pictureBox6.Location = new System.Drawing.Point(783, 362);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox6.TabIndex = 15;
-            this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Location = new System.Drawing.Point(820, 362);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox7.TabIndex = 16;
-            this.pictureBox7.TabStop = false;
+            this.pictureBoxShowPassword.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxShowPassword.Image = global::CarWash1.Properties.Resources.ShowPass1;
+            this.pictureBoxShowPassword.Location = new System.Drawing.Point(783, 362);
+            this.pictureBoxShowPassword.Name = "pictureBoxShowPassword";
+            this.pictureBoxShowPassword.Size = new System.Drawing.Size(30, 30);
+            this.pictureBoxShowPassword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxShowPassword.TabIndex = 15;
+            this.pictureBoxShowPassword.TabStop = false;
+            this.pictureBoxShowPassword.Tag = "";
+            this.pictureBoxShowPassword.Click += new System.EventHandler(this.pictureBoxShowPassword_Click);
             // 
             // btAuthentication
             // 
@@ -249,16 +246,30 @@
             this.btAuthentication.UseVisualStyleBackColor = false;
             this.btAuthentication.Click += new System.EventHandler(this.btAuthentication_Click);
             // 
+            // btConnectToDatabase
+            // 
+            this.btConnectToDatabase.BackColor = System.Drawing.Color.Transparent;
+            this.btConnectToDatabase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btConnectToDatabase.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold);
+            this.btConnectToDatabase.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.btConnectToDatabase.Location = new System.Drawing.Point(456, 653);
+            this.btConnectToDatabase.Name = "btConnectToDatabase";
+            this.btConnectToDatabase.Size = new System.Drawing.Size(176, 41);
+            this.btConnectToDatabase.TabIndex = 18;
+            this.btConnectToDatabase.Text = "Connect to Database";
+            this.btConnectToDatabase.UseVisualStyleBackColor = false;
+            this.btConnectToDatabase.Click += new System.EventHandler(this.btConnectToDatabase_Click);
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(862, 706);
+            this.Controls.Add(this.btConnectToDatabase);
             this.Controls.Add(this.btAuthentication);
-            this.Controls.Add(this.pictureBox7);
-            this.Controls.Add(this.pictureBox6);
+            this.Controls.Add(this.pictureBoxShowPassword);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.btLogin);
             this.Controls.Add(this.btNewUser);
@@ -286,8 +297,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxShowPassword)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -309,9 +319,9 @@
         private System.Windows.Forms.Button btLogin;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.PictureBox pictureBoxShowPassword;
         private System.Windows.Forms.Button btAuthentication;
+        private System.Windows.Forms.Button btConnectToDatabase;
     }
 }
 

@@ -41,19 +41,26 @@
             this.txtCfPassword = new System.Windows.Forms.TextBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtPosition = new System.Windows.Forms.TextBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBoxShowPass = new System.Windows.Forms.CheckBox();
+            this.checkBoxShowCfPass = new System.Windows.Forms.CheckBox();
             this.btCreate = new System.Windows.Forms.Button();
             this.btUpdate = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btBack = new System.Windows.Forms.Button();
             this.btDelete = new System.Windows.Forms.Button();
+            this.DataGridUser = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cbSName = new System.Windows.Forms.ComboBox();
+            this.checkBoxStaffName = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridUser)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox2
@@ -75,7 +82,7 @@
             this.label1.ForeColor = System.Drawing.Color.Red;
             this.label1.Location = new System.Drawing.Point(470, 162);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(201, 23);
+            this.label1.Size = new System.Drawing.Size(251, 28);
             this.label1.TabIndex = 21;
             this.label1.Text = "CREATE NEW USER";
             // 
@@ -97,7 +104,7 @@
             this.txtUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUser.Location = new System.Drawing.Point(496, 240);
             this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(250, 19);
+            this.txtUser.Size = new System.Drawing.Size(250, 23);
             this.txtUser.TabIndex = 23;
             // 
             // label2
@@ -108,7 +115,7 @@
             this.label2.ForeColor = System.Drawing.Color.DimGray;
             this.label2.Location = new System.Drawing.Point(470, 203);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(75, 19);
+            this.label2.Size = new System.Drawing.Size(95, 24);
             this.label2.TabIndex = 24;
             this.label2.Text = "Username";
             // 
@@ -120,7 +127,7 @@
             this.label3.ForeColor = System.Drawing.Color.DimGray;
             this.label3.Location = new System.Drawing.Point(470, 278);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(71, 19);
+            this.label3.Size = new System.Drawing.Size(89, 24);
             this.label3.TabIndex = 27;
             this.label3.Text = "Password";
             // 
@@ -131,8 +138,9 @@
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.Location = new System.Drawing.Point(496, 315);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(250, 19);
+            this.txtPassword.Size = new System.Drawing.Size(250, 23);
             this.txtPassword.TabIndex = 26;
+            this.txtPassword.UseSystemPasswordChar = true;
             // 
             // pictureBox3
             // 
@@ -153,7 +161,7 @@
             this.label4.ForeColor = System.Drawing.Color.DimGray;
             this.label4.Location = new System.Drawing.Point(470, 353);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(125, 19);
+            this.label4.Size = new System.Drawing.Size(161, 24);
             this.label4.TabIndex = 30;
             this.label4.Text = "Confirm Password";
             // 
@@ -164,8 +172,9 @@
             this.txtCfPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCfPassword.Location = new System.Drawing.Point(496, 390);
             this.txtCfPassword.Name = "txtCfPassword";
-            this.txtCfPassword.Size = new System.Drawing.Size(250, 19);
+            this.txtCfPassword.Size = new System.Drawing.Size(250, 23);
             this.txtCfPassword.TabIndex = 29;
+            this.txtCfPassword.UseSystemPasswordChar = true;
             // 
             // pictureBox4
             // 
@@ -186,19 +195,9 @@
             this.label5.ForeColor = System.Drawing.Color.DimGray;
             this.label5.Location = new System.Drawing.Point(470, 426);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(61, 19);
+            this.label5.Size = new System.Drawing.Size(102, 24);
             this.label5.TabIndex = 33;
-            this.label5.Text = "Position";
-            // 
-            // txtPosition
-            // 
-            this.txtPosition.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(211)))), ((int)(((byte)(211)))));
-            this.txtPosition.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPosition.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPosition.Location = new System.Drawing.Point(496, 463);
-            this.txtPosition.Name = "txtPosition";
-            this.txtPosition.Size = new System.Drawing.Size(250, 19);
-            this.txtPosition.TabIndex = 32;
+            this.label5.Text = "Staff Name";
             // 
             // pictureBox5
             // 
@@ -211,29 +210,35 @@
             this.pictureBox5.TabIndex = 31;
             this.pictureBox5.TabStop = false;
             // 
-            // checkBox1
+            // checkBoxShowPass
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(777, 320);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(15, 14);
-            this.checkBox1.TabIndex = 34;
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBoxShowPass.AutoSize = true;
+            this.checkBoxShowPass.BackColor = System.Drawing.Color.Transparent;
+            this.checkBoxShowPass.Location = new System.Drawing.Point(777, 311);
+            this.checkBoxShowPass.Name = "checkBoxShowPass";
+            this.checkBoxShowPass.Size = new System.Drawing.Size(96, 33);
+            this.checkBoxShowPass.TabIndex = 34;
+            this.checkBoxShowPass.Text = "Show";
+            this.checkBoxShowPass.UseVisualStyleBackColor = false;
+            this.checkBoxShowPass.CheckedChanged += new System.EventHandler(this.checkBoxShowPass_CheckedChanged);
             // 
-            // checkBox2
+            // checkBoxShowCfPass
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(777, 395);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(15, 14);
-            this.checkBox2.TabIndex = 35;
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBoxShowCfPass.AutoSize = true;
+            this.checkBoxShowCfPass.BackColor = System.Drawing.Color.Transparent;
+            this.checkBoxShowCfPass.Location = new System.Drawing.Point(777, 386);
+            this.checkBoxShowCfPass.Name = "checkBoxShowCfPass";
+            this.checkBoxShowCfPass.Size = new System.Drawing.Size(96, 33);
+            this.checkBoxShowCfPass.TabIndex = 35;
+            this.checkBoxShowCfPass.Text = "Show";
+            this.checkBoxShowCfPass.UseVisualStyleBackColor = false;
+            this.checkBoxShowCfPass.CheckedChanged += new System.EventHandler(this.checkBoxShowCfPass_CheckedChanged);
             // 
             // btCreate
             // 
             this.btCreate.BackColor = System.Drawing.Color.Transparent;
             this.btCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btCreate.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
+            this.btCreate.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold);
             this.btCreate.ForeColor = System.Drawing.Color.CornflowerBlue;
             this.btCreate.Location = new System.Drawing.Point(496, 522);
             this.btCreate.Name = "btCreate";
@@ -241,38 +246,41 @@
             this.btCreate.TabIndex = 37;
             this.btCreate.Text = "CREATE";
             this.btCreate.UseVisualStyleBackColor = false;
+            this.btCreate.Click += new System.EventHandler(this.btCreate_Click);
             // 
             // btUpdate
             // 
             this.btUpdate.BackColor = System.Drawing.Color.Transparent;
             this.btUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btUpdate.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
+            this.btUpdate.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold);
             this.btUpdate.ForeColor = System.Drawing.Color.CornflowerBlue;
             this.btUpdate.Location = new System.Drawing.Point(636, 522);
             this.btUpdate.Name = "btUpdate";
             this.btUpdate.Size = new System.Drawing.Size(126, 41);
             this.btUpdate.TabIndex = 36;
-            this.btUpdate.Text = "UPDATE";
+            this.btUpdate.Text = "EDIT";
             this.btUpdate.UseVisualStyleBackColor = false;
+            this.btUpdate.Click += new System.EventHandler(this.btUpdate_Click);
             // 
-            // button1
+            // btBack
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
-            this.button1.ForeColor = System.Drawing.Color.Red;
-            this.button1.Location = new System.Drawing.Point(496, 570);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(126, 41);
-            this.button1.TabIndex = 40;
-            this.button1.Text = "BACK";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btBack.BackColor = System.Drawing.Color.Transparent;
+            this.btBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btBack.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold);
+            this.btBack.ForeColor = System.Drawing.Color.Red;
+            this.btBack.Location = new System.Drawing.Point(496, 570);
+            this.btBack.Name = "btBack";
+            this.btBack.Size = new System.Drawing.Size(126, 41);
+            this.btBack.TabIndex = 40;
+            this.btBack.Text = "BACK";
+            this.btBack.UseVisualStyleBackColor = false;
+            this.btBack.Click += new System.EventHandler(this.btBack_Click);
             // 
             // btDelete
             // 
             this.btDelete.BackColor = System.Drawing.Color.Transparent;
             this.btDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btDelete.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
+            this.btDelete.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold);
             this.btDelete.ForeColor = System.Drawing.Color.CornflowerBlue;
             this.btDelete.Location = new System.Drawing.Point(636, 570);
             this.btDelete.Name = "btDelete";
@@ -280,21 +288,99 @@
             this.btDelete.TabIndex = 39;
             this.btDelete.Text = "DELETE";
             this.btDelete.UseVisualStyleBackColor = false;
+            this.btDelete.Click += new System.EventHandler(this.btDelete_Click);
+            // 
+            // DataGridUser
+            // 
+            this.DataGridUser.BackgroundColor = System.Drawing.Color.MistyRose;
+            this.DataGridUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DataGridUser.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID,
+            this.Column1,
+            this.Column3,
+            this.Column2});
+            this.DataGridUser.Location = new System.Drawing.Point(19, 234);
+            this.DataGridUser.Name = "DataGridUser";
+            this.DataGridUser.RowHeadersWidth = 51;
+            this.DataGridUser.Size = new System.Drawing.Size(398, 389);
+            this.DataGridUser.TabIndex = 41;
+            this.DataGridUser.SelectionChanged += new System.EventHandler(this.DataGridUser_SelectionChanged);
+            // 
+            // ID
+            // 
+            this.ID.Frozen = true;
+            this.ID.HeaderText = "ID";
+            this.ID.MinimumWidth = 6;
+            this.ID.Name = "ID";
+            this.ID.Width = 80;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Username";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 150;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Password";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 125;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Position";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 120;
+            // 
+            // cbSName
+            // 
+            this.cbSName.AccessibleDescription = "";
+            this.cbSName.AccessibleName = "";
+            this.cbSName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(211)))), ((int)(((byte)(211)))));
+            this.cbSName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbSName.Enabled = false;
+            this.cbSName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.cbSName.ForeColor = System.Drawing.Color.Black;
+            this.cbSName.FormattingEnabled = true;
+            this.cbSName.Location = new System.Drawing.Point(496, 458);
+            this.cbSName.Name = "cbSName";
+            this.cbSName.Size = new System.Drawing.Size(250, 33);
+            this.cbSName.TabIndex = 42;
+            this.cbSName.SelectedIndexChanged += new System.EventHandler(this.cbSName_SelectedIndexChanged);
+            // 
+            // checkBoxStaffName
+            // 
+            this.checkBoxStaffName.AutoSize = true;
+            this.checkBoxStaffName.BackColor = System.Drawing.Color.Transparent;
+            this.checkBoxStaffName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.checkBoxStaffName.Location = new System.Drawing.Point(777, 446);
+            this.checkBoxStaffName.Name = "checkBoxStaffName";
+            this.checkBoxStaffName.Size = new System.Drawing.Size(107, 54);
+            this.checkBoxStaffName.TabIndex = 43;
+            this.checkBoxStaffName.Text = "User for \r\nstaffs";
+            this.checkBoxStaffName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.checkBoxStaffName.UseVisualStyleBackColor = false;
+            this.checkBoxStaffName.CheckedChanged += new System.EventHandler(this.checkBoxStaffName_CheckedChanged);
             // 
             // CreateUser
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(873, 670);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.checkBoxStaffName);
+            this.Controls.Add(this.cbSName);
+            this.Controls.Add(this.DataGridUser);
+            this.Controls.Add(this.btBack);
             this.Controls.Add(this.btDelete);
             this.Controls.Add(this.btCreate);
             this.Controls.Add(this.btUpdate);
-            this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.checkBoxShowCfPass);
+            this.Controls.Add(this.checkBoxShowPass);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.txtPosition);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtCfPassword);
@@ -310,6 +396,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "CreateUser";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
             this.Load += new System.EventHandler(this.CreateUser_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -317,6 +404,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridUser)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -336,13 +424,19 @@
         private System.Windows.Forms.TextBox txtCfPassword;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtPosition;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox checkBoxShowPass;
+        private System.Windows.Forms.CheckBox checkBoxShowCfPass;
         private System.Windows.Forms.Button btCreate;
         private System.Windows.Forms.Button btUpdate;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btBack;
         private System.Windows.Forms.Button btDelete;
+        private System.Windows.Forms.DataGridView DataGridUser;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.ComboBox cbSName;
+        private System.Windows.Forms.CheckBox checkBoxStaffName;
     }
 }

@@ -36,6 +36,7 @@
             this.btExpense = new System.Windows.Forms.Button();
             this.btIncome = new System.Windows.Forms.Button();
             this.btLogout = new System.Windows.Forms.Button();
+            this.labelStaff = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -103,6 +104,7 @@
             this.btExpense.TabIndex = 4;
             this.btExpense.Text = "Expense ";
             this.btExpense.UseVisualStyleBackColor = false;
+            this.btExpense.Click += new System.EventHandler(this.btExpense_Click);
             // 
             // btIncome
             // 
@@ -129,14 +131,27 @@
             this.btLogout.Size = new System.Drawing.Size(55, 37);
             this.btLogout.TabIndex = 20;
             this.btLogout.UseVisualStyleBackColor = false;
+            this.btLogout.Click += new System.EventHandler(this.btLogout_Click);
+            // 
+            // labelStaff
+            // 
+            this.labelStaff.AutoSize = true;
+            this.labelStaff.BackColor = System.Drawing.Color.Transparent;
+            this.labelStaff.ForeColor = System.Drawing.Color.Red;
+            this.labelStaff.Location = new System.Drawing.Point(49, 12);
+            this.labelStaff.Name = "labelStaff";
+            this.labelStaff.Size = new System.Drawing.Size(76, 29);
+            this.labelStaff.TabIndex = 21;
+            this.labelStaff.Text = "User :";
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1004, 541);
+            this.Controls.Add(this.labelStaff);
             this.Controls.Add(this.btLogout);
             this.Controls.Add(this.btIncome);
             this.Controls.Add(this.btExpense);
@@ -153,6 +168,7 @@
             this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -165,5 +181,6 @@
         private System.Windows.Forms.Button btExpense;
         private System.Windows.Forms.Button btIncome;
         private System.Windows.Forms.Button btLogout;
+        private System.Windows.Forms.Label labelStaff;
     }
 }

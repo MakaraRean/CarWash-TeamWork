@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data.SqlClient;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace CarWash1
@@ -32,19 +33,23 @@ namespace CarWash1
                 SqlDataReader reader = cmd.ExecuteReader();
                 if (reader.Read())
                 {
-                    userID = reader.GetValue(2).ToString();
+                    userID = reader.GetValue(3).ToString();
                     cmd.Dispose();
                     reader.Close();
-                    string sql1 = "SELECT SName FROM tbStaffs WHERE SID = " + userID + ";";
+                    string sql1 = "SELECT SName,Position FROM tbStaffs WHERE SID = " + userID + ";";
                     SqlCommand cmd1 = new SqlCommand(sql1, DatabaseConnection.DataCon);
                     SqlDataReader reader1 = cmd1.ExecuteReader();
                     if (reader1.Read())
                     {
-                        staffName = reader1.GetValue(0).ToString();
+                        staffName = "User : "+reader1.GetValue(0).ToString()+" ("+reader1.GetValue(1).ToString()+")";
                         cmd1.Dispose();
                         reader1.Close();
                         this.Hide();
-                        new MainForm(staffName).Show();
+                        new MainForm(staffName,userID).Show();
+                    }
+                    else
+                    {
+
                     }
                     
                 }
@@ -78,6 +83,37 @@ namespace CarWash1
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btConnectToDatabase_Click(object sender, EventArgs e)
+        {
+            string database = "dbCarWash";
+            string server = "DESKTOP-JG5UF03\\MAKARA";
+
+            DatabaseConnection.ConnectDatabase(server, database);
+            MessageBox.Show("Connect to database successfully");
+        }
+
+        //Use i to coun for %2
+        int i = 0;
+        private void pictureBoxShowPassword_Click(object sender, EventArgs e)
+        {
+            Bitmap bitmapShow = Properties.Resources.ShowPass1;
+            Bitmap bitmapHide = Properties.Resources.HidePass;
+            
+            if (i%2==0)
+            {
+                txtPassword.UseSystemPasswordChar = false;
+                pictureBoxShowPassword.Image = bitmapHide;
+                i++;
+                
+            }
+            else
+            {
+                txtPassword.UseSystemPasswordChar = true;
+                pictureBoxShowPassword.Image = bitmapShow;
+                i++;
+            }
         }
     }
 }
