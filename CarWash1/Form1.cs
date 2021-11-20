@@ -17,13 +17,14 @@ namespace CarWash1
             Application.Exit();
         }
 
+        public static int userID{ get; set; }
         private void btLogin_Click(object sender, EventArgs e)
         {
             string userName = txtUserName.Text;
             string pass = txtPassword.Text;
             string database = "dbCarWash";
             string server = "DESKTOP-JG5UF03\\MAKARA";
-            string userID;
+
             string staffName;
             try
             {
@@ -33,7 +34,7 @@ namespace CarWash1
                 SqlDataReader reader = cmd.ExecuteReader();
                 if (reader.Read())
                 {
-                    userID = reader.GetValue(3).ToString();
+                    userID = int.Parse(reader.GetValue(3).ToString());
                     cmd.Dispose();
                     reader.Close();
                     string sql1 = "SELECT SName,Position FROM tbStaffs WHERE SID = " + userID + ";";

@@ -17,12 +17,12 @@ namespace CarWash1
         {
             InitializeComponent();
         }
-        public Expense(string sID)
+        public Expense(int sID)
         {
             InitializeComponent();
             this.sID = sID;
         }
-        string sID;
+        int sID;
 
         private void ClearText()
         {

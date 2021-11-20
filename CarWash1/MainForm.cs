@@ -10,14 +10,14 @@ namespace CarWash1
             InitializeComponent();
         }
 
-        public MainForm(string staff,string userID)
+        public MainForm(string staff,int userID)
         {
             InitializeComponent();
             this.staff = staff;
             this.userID = userID;
         }
         string staff;
-        string userID;
+        int userID;
         private void MainForm_Load(object sender, System.EventArgs e)
         {
             labelStaff.Text = staff;
@@ -60,7 +60,12 @@ namespace CarWash1
 
         private void btSales_Click(object sender, EventArgs e)
         {
-            new Sales(userID).Show();
+            new Sales(userID).ShowDialog();
+        }
+
+        private void btIncome_Click(object sender, EventArgs e)
+        {
+            new Income().ShowDialog();
         }
     }
 }

@@ -28,8 +28,13 @@ namespace CarWash1
                     catID.Add(catid);
                     string catName = reader.GetValue(1).ToString();
                     cbCatName.Items.Add(catName);
+                    cbCatName.SelectedIndex = 0;
                 }
-                cbCatName.SelectedIndex = 0;
+                if (reader.Read() == false)
+                {
+                    MessageBox.Show("Don't have any category in your database");
+                }
+                
                 cmd.Dispose();
                 reader.Close();
             }

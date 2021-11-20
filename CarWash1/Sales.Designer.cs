@@ -36,14 +36,9 @@
             this.btRemove = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btUpdate = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btPayment = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.labelCar = new System.Windows.Forms.Label();
             this.labelDrink = new System.Windows.Forms.Label();
@@ -62,6 +57,14 @@
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.pictureCar2 = new System.Windows.Forms.PictureBox();
             this.pictureDrink2 = new System.Windows.Forms.PictureBox();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -157,52 +160,15 @@
             this.Column2,
             this.Column3,
             this.Column4,
-            this.Column5});
-            this.dataGridView1.Location = new System.Drawing.Point(322, 241);
+            this.Column5,
+            this.Column6,
+            this.Column7,
+            this.Column8});
+            this.dataGridView1.Location = new System.Drawing.Point(303, 241);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(576, 322);
+            this.dataGridView1.Size = new System.Drawing.Size(619, 322);
             this.dataGridView1.TabIndex = 9;
-            // 
-            // Column1
-            // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column1.FillWeight = 240.4488F;
-            this.Column1.HeaderText = "Product Name";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.FillWeight = 203.0457F;
-            this.Column2.HeaderText = "Qty";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 90;
-            // 
-            // Column3
-            // 
-            this.Column3.FillWeight = 18.83516F;
-            this.Column3.HeaderText = "Price ";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 125;
-            // 
-            // Column4
-            // 
-            this.Column4.FillWeight = 18.83516F;
-            this.Column4.HeaderText = "Type";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 125;
-            // 
-            // Column5
-            // 
-            this.Column5.FillWeight = 18.83516F;
-            this.Column5.HeaderText = "Amount";
-            this.Column5.MinimumWidth = 6;
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 125;
             // 
             // btUpdate
             // 
@@ -230,18 +196,19 @@
             this.pictureBox3.TabIndex = 11;
             this.pictureBox3.TabStop = false;
             // 
-            // button4
+            // btPayment
             // 
-            this.button4.BackColor = System.Drawing.Color.Red;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(351, 599);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(115, 34);
-            this.button4.TabIndex = 12;
-            this.button4.Text = "Payment";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btPayment.BackColor = System.Drawing.Color.Red;
+            this.btPayment.FlatAppearance.BorderSize = 0;
+            this.btPayment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btPayment.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btPayment.Location = new System.Drawing.Point(351, 599);
+            this.btPayment.Name = "btPayment";
+            this.btPayment.Size = new System.Drawing.Size(115, 34);
+            this.btPayment.TabIndex = 12;
+            this.btPayment.Text = "Payment";
+            this.btPayment.UseVisualStyleBackColor = false;
+            this.btPayment.Click += new System.EventHandler(this.btPayment_Click);
             // 
             // pictureBox4
             // 
@@ -450,12 +417,76 @@
             this.pictureDrink2.TabStop = false;
             this.pictureDrink2.Click += new System.EventHandler(this.pictureDrink2_Click);
             // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column1.FillWeight = 240.4488F;
+            this.Column1.HeaderText = "Product Name";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.FillWeight = 203.0457F;
+            this.Column2.HeaderText = "Qty";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 90;
+            // 
+            // Column3
+            // 
+            this.Column3.FillWeight = 18.83516F;
+            this.Column3.HeaderText = "Price ";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 125;
+            // 
+            // Column4
+            // 
+            this.Column4.FillWeight = 18.83516F;
+            this.Column4.HeaderText = "Type";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 125;
+            // 
+            // Column5
+            // 
+            this.Column5.FillWeight = 18.83516F;
+            this.Column5.HeaderText = "Amount";
+            this.Column5.MinimumWidth = 6;
+            this.Column5.Name = "Column5";
+            this.Column5.Width = 125;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "DID";
+            this.Column6.MinimumWidth = 6;
+            this.Column6.Name = "Column6";
+            this.Column6.Visible = false;
+            this.Column6.Width = 125;
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "CarName";
+            this.Column7.MinimumWidth = 6;
+            this.Column7.Name = "Column7";
+            this.Column7.Visible = false;
+            this.Column7.Width = 125;
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "CatID";
+            this.Column8.MinimumWidth = 6;
+            this.Column8.Name = "Column8";
+            this.Column8.Visible = false;
+            this.Column8.Width = 125;
+            // 
             // Sales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(917, 661);
+            this.ClientSize = new System.Drawing.Size(915, 661);
             this.Controls.Add(this.checkDrink);
             this.Controls.Add(this.comboCar);
             this.Controls.Add(this.label8);
@@ -467,7 +498,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.labelDrink);
             this.Controls.Add(this.labelCar);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.btPayment);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.btUpdate);
             this.Controls.Add(this.pictureBox3);
@@ -518,7 +549,7 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btUpdate;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btPayment;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label labelCar;
         private System.Windows.Forms.Label labelDrink;
@@ -542,5 +573,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
     }
 }

@@ -35,7 +35,6 @@
             this.txtEnd = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtStart = new System.Windows.Forms.TextBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.btBack = new System.Windows.Forms.Button();
@@ -45,6 +44,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtTotalAmount = new System.Windows.Forms.TextBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.dateTimeStart = new System.Windows.Forms.DateTimePicker();
+            this.dateTimeEnd = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -59,6 +60,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(53, 277);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(532, 363);
             this.dataGridView1.TabIndex = 79;
             // 
@@ -82,7 +84,7 @@
             this.label1.Font = new System.Drawing.Font("Calibri", 12F);
             this.label1.Location = new System.Drawing.Point(265, 215);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(37, 19);
+            this.label1.Size = new System.Drawing.Size(47, 24);
             this.label1.TabIndex = 75;
             this.label1.Text = "End:";
             // 
@@ -93,7 +95,7 @@
             this.txtEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEnd.Location = new System.Drawing.Point(316, 215);
             this.txtEnd.Name = "txtEnd";
-            this.txtEnd.Size = new System.Drawing.Size(143, 19);
+            this.txtEnd.Size = new System.Drawing.Size(143, 23);
             this.txtEnd.TabIndex = 77;
             // 
             // pictureBox1
@@ -114,19 +116,9 @@
             this.label2.Font = new System.Drawing.Font("Calibri", 12F);
             this.label2.Location = new System.Drawing.Point(49, 215);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 19);
+            this.label2.Size = new System.Drawing.Size(55, 24);
             this.label2.TabIndex = 72;
             this.label2.Text = "Start:";
-            // 
-            // txtStart
-            // 
-            this.txtStart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.txtStart.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtStart.Location = new System.Drawing.Point(104, 215);
-            this.txtStart.Name = "txtStart";
-            this.txtStart.Size = new System.Drawing.Size(143, 19);
-            this.txtStart.TabIndex = 74;
             // 
             // pictureBox3
             // 
@@ -172,7 +164,7 @@
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(85)))), ((int)(((byte)(117)))));
             this.label6.Location = new System.Drawing.Point(243, 9);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(151, 33);
+            this.label6.Size = new System.Drawing.Size(190, 43);
             this.label6.TabIndex = 70;
             this.label6.Text = "EXPENSE";
             // 
@@ -207,7 +199,7 @@
             this.label3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(304, 668);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(103, 19);
+            this.label3.Size = new System.Drawing.Size(124, 24);
             this.label3.TabIndex = 83;
             this.label3.Text = "Total Amount";
             // 
@@ -218,7 +210,7 @@
             this.txtTotalAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTotalAmount.Location = new System.Drawing.Point(425, 668);
             this.txtTotalAmount.Name = "txtTotalAmount";
-            this.txtTotalAmount.Size = new System.Drawing.Size(160, 19);
+            this.txtTotalAmount.Size = new System.Drawing.Size(160, 23);
             this.txtTotalAmount.TabIndex = 82;
             // 
             // pictureBox4
@@ -232,22 +224,43 @@
             this.pictureBox4.TabIndex = 81;
             this.pictureBox4.TabStop = false;
             // 
+            // dateTimeStart
+            // 
+            this.dateTimeStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimeStart.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimeStart.Location = new System.Drawing.Point(110, 209);
+            this.dateTimeStart.Name = "dateTimeStart";
+            this.dateTimeStart.Size = new System.Drawing.Size(131, 30);
+            this.dateTimeStart.TabIndex = 84;
+            this.dateTimeStart.Value = new System.DateTime(2021, 11, 13, 16, 41, 12, 0);
+            // 
+            // dateTimeEnd
+            // 
+            this.dateTimeEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimeEnd.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimeEnd.Location = new System.Drawing.Point(318, 209);
+            this.dateTimeEnd.Name = "dateTimeEnd";
+            this.dateTimeEnd.Size = new System.Drawing.Size(131, 30);
+            this.dateTimeEnd.TabIndex = 85;
+            this.dateTimeEnd.Value = new System.DateTime(2021, 11, 13, 16, 41, 26, 0);
+            // 
             // Income
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(631, 745);
+            this.Controls.Add(this.dateTimeEnd);
+            this.Controls.Add(this.dateTimeStart);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btSearch);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtEnd);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtStart);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.btBack);
@@ -280,7 +293,6 @@
         private System.Windows.Forms.TextBox txtEnd;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtStart;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Button btBack;
@@ -290,5 +302,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtTotalAmount;
         private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.DateTimePicker dateTimeStart;
+        private System.Windows.Forms.DateTimePicker dateTimeEnd;
     }
 }

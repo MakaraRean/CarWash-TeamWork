@@ -119,6 +119,7 @@
             this.btIncome.TabIndex = 5;
             this.btIncome.Text = "Income";
             this.btIncome.UseVisualStyleBackColor = false;
+            this.btIncome.Click += new System.EventHandler(this.btIncome_Click);
             // 
             // btLogout
             // 
