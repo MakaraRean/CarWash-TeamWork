@@ -90,6 +90,26 @@ namespace CarWash1
             }
         }
 
+        private void CheckUserName()
+        {
+            string username = txtUser.Text;
+            string sql = "SELECT UserName FROM tbUsers WHERE UserName='" + username + "';";
+            SqlCommand cmd = new SqlCommand(sql, DatabaseConnection.DataCon);
+            SqlDataReader reader = cmd.ExecuteReader();
+            if (reader.Read())
+            {
+                labelUserNameExist.Visible = true;
+                btCreate.Enabled = false;
+            }
+            else
+            {
+                labelUserNameExist.Visible = false;
+                btCreate.Enabled = true;
+            }
+            cmd.Dispose();
+            reader.Close();
+        }
+
         int sid=0;
         private void btCreate_Click(object sender, EventArgs e)
         {
@@ -281,6 +301,11 @@ namespace CarWash1
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void txtUser_TextChanged(object sender, EventArgs e)
+        {
+            CheckUserName();
         }
     }
 }

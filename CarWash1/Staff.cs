@@ -15,32 +15,33 @@ namespace CarWash1
         private void GetData()
         {
             DataGridStaff.Rows.Clear();
-            int id;
+            string id;
             string name;
             string postion;
             string address;
             string phone;
-            double salary;
+            string salary;
             try
             {
                 string sql = "SELECT * FROM tbStaffs;";
                 SqlCommand cmd = new SqlCommand(sql, DatabaseConnection.DataCon);
                 SqlDataReader reader = cmd.ExecuteReader();
-
+                
                 while (reader.Read())
                 {
-                    id = int.Parse(reader.GetValue(0).ToString());
+                    id = reader.GetValue(0).ToString();
                     name = reader.GetValue(1).ToString();
                     postion = reader.GetValue(2).ToString();
                     address = reader.GetValue(3).ToString();
                     phone = reader.GetValue(4).ToString();
-                    salary = double.Parse(reader.GetValue(5).ToString());
+                    salary = reader.GetValue(5).ToString();
 
                     DataGridStaff.Rows.Add(id, name, postion, address, phone, salary);
                 }
                 cmd.Dispose();
                 reader.Close();
-            }catch(Exception ex)
+            }
+            catch(Exception ex)
             {
                 MessageBox.Show(ex.Message);
             } 
@@ -121,6 +122,7 @@ namespace CarWash1
         {
             try
             {
+                string id = DataGridStaff.CurrentRow.Cells[0].Value.ToString();
                 DialogResult result = MessageBox.Show("Are you sure to remove?", "Remove staff", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (result == DialogResult.Yes)
                 {
@@ -140,6 +142,43 @@ namespace CarWash1
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void btExit_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btSearch_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DataGridStaff.Rows.Clear();
+                string sid = txtSearch.Text;
+                string sql = "SELECT * FROM tbStaffs WHERE SID=" + sid + ";";
+                SqlCommand cmd = new SqlCommand(sql, DatabaseConnection.DataCon);
+                SqlDataReader reader = cmd.ExecuteReader();
+                if (reader.Read())
+                {
+                    DataGridStaff.Rows.Add(reader.GetValue(0).ToString(), reader.GetValue(1).ToString(), reader.GetValue(2).ToString(), reader.GetValue(3).ToString(), reader.GetValue(4).ToString(), reader.GetValue(5).ToString());
+                }
+                else
+                {
+                    MessageBox.Show("Don't have staff ID " + sid + "");
+                }
+                cmd.Dispose();
+                reader.Close();
+                txtSearch.Clear();
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
+        }
+
+        private void btRefresh_Click(object sender, EventArgs e)
+        {
+            GetData();
         }
     }
 }

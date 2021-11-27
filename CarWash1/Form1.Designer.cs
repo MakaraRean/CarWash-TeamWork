@@ -38,18 +38,14 @@
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btExit = new System.Windows.Forms.Button();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.btNewUser = new System.Windows.Forms.Button();
             this.btLogin = new System.Windows.Forms.Button();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.pictureBoxShowPassword = new System.Windows.Forms.PictureBox();
             this.btAuthentication = new System.Windows.Forms.Button();
-            this.btConnectToDatabase = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxShowPassword)).BeginInit();
             this.SuspendLayout();
@@ -155,31 +151,6 @@
             this.btExit.UseVisualStyleBackColor = false;
             this.btExit.Click += new System.EventHandler(this.btExit_Click);
             // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox4.Image = global::CarWash1.Properties.Resources.Shape_03;
-            this.pictureBox4.Location = new System.Drawing.Point(618, 596);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(245, 111);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 10;
-            this.pictureBox4.TabStop = false;
-            // 
-            // btNewUser
-            // 
-            this.btNewUser.BackColor = System.Drawing.Color.Red;
-            this.btNewUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btNewUser.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btNewUser.ForeColor = System.Drawing.Color.White;
-            this.btNewUser.Location = new System.Drawing.Point(697, 634);
-            this.btNewUser.Name = "btNewUser";
-            this.btNewUser.Size = new System.Drawing.Size(161, 40);
-            this.btNewUser.TabIndex = 11;
-            this.btNewUser.Text = "Create New User";
-            this.btNewUser.UseVisualStyleBackColor = false;
-            this.btNewUser.Click += new System.EventHandler(this.btNewUser_Click);
-            // 
             // btLogin
             // 
             this.btLogin.BackColor = System.Drawing.Color.Transparent;
@@ -246,20 +217,6 @@
             this.btAuthentication.UseVisualStyleBackColor = false;
             this.btAuthentication.Click += new System.EventHandler(this.btAuthentication_Click);
             // 
-            // btConnectToDatabase
-            // 
-            this.btConnectToDatabase.BackColor = System.Drawing.Color.Transparent;
-            this.btConnectToDatabase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btConnectToDatabase.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold);
-            this.btConnectToDatabase.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.btConnectToDatabase.Location = new System.Drawing.Point(456, 653);
-            this.btConnectToDatabase.Name = "btConnectToDatabase";
-            this.btConnectToDatabase.Size = new System.Drawing.Size(176, 41);
-            this.btConnectToDatabase.TabIndex = 18;
-            this.btConnectToDatabase.Text = "Connect to Database";
-            this.btConnectToDatabase.UseVisualStyleBackColor = false;
-            this.btConnectToDatabase.Click += new System.EventHandler(this.btConnectToDatabase_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
@@ -267,13 +224,10 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(862, 706);
-            this.Controls.Add(this.btConnectToDatabase);
             this.Controls.Add(this.btAuthentication);
             this.Controls.Add(this.pictureBoxShowPassword);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.btLogin);
-            this.Controls.Add(this.btNewUser);
-            this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.btExit);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtPassword);
@@ -295,7 +249,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxShowPassword)).EndInit();
             this.ResumeLayout(false);
@@ -314,14 +267,11 @@
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btExit;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Button btNewUser;
         private System.Windows.Forms.Button btLogin;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.PictureBox pictureBoxShowPassword;
         private System.Windows.Forms.Button btAuthentication;
-        private System.Windows.Forms.Button btConnectToDatabase;
     }
 }
 

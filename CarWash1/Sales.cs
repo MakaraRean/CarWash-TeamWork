@@ -215,7 +215,7 @@ namespace CarWash1
 
         private int InsertToInvoice(double payment)
         {
-            string date = DateTime.Now.ToString("yyyy-MM-dd");
+            string date = DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss");
             double total = payment;
             int invoiceID = 0;
             try
@@ -292,7 +292,6 @@ namespace CarWash1
             {
                 int qty = temp.Qty;
                 int did = temp.Did;
-                MessageBox.Show(qty + "And" + did);
                 string sql = "UPDATE tbDrinks SET SQty=SQty-" + qty + " WHERE DID= " + did + ";";
                 SqlCommand cmd = new SqlCommand(sql, DatabaseConnection.DataCon);
                 cmd.ExecuteNonQuery();

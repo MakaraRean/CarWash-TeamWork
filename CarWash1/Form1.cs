@@ -25,6 +25,7 @@ namespace CarWash1
             string database = "dbCarWash";
             string server = "DESKTOP-JG5UF03\\MAKARA";
 
+            string position;
             string staffName;
             try
             {
@@ -43,10 +44,11 @@ namespace CarWash1
                     if (reader1.Read())
                     {
                         staffName = "User : "+reader1.GetValue(0).ToString()+" ("+reader1.GetValue(1).ToString()+")";
+                        position = reader1.GetValue(1).ToString();
                         cmd1.Dispose();
                         reader1.Close();
                         this.Hide();
-                        new MainForm(staffName,userID).Show();
+                        new MainForm(staffName,userID,position).Show();
                     }
                     else
                     {
@@ -76,10 +78,6 @@ namespace CarWash1
             new MainForm().Show();
         }
 
-        private void btNewUser_Click(object sender, EventArgs e)
-        {
-            new CreateUser().ShowDialog();
-        }
 
         private void Form1_Load(object sender, EventArgs e)
         {

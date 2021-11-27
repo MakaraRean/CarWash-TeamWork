@@ -30,10 +30,7 @@ namespace CarWash1
                     cbCatName.Items.Add(catName);
                     cbCatName.SelectedIndex = 0;
                 }
-                if (reader.Read() == false)
-                {
-                    MessageBox.Show("Don't have any category in your database");
-                }
+                
                 
                 cmd.Dispose();
                 reader.Close();
@@ -73,6 +70,12 @@ namespace CarWash1
             }
             
         }
+        private void ClearText()
+        {
+            txtName.Clear();
+            txtPrice.Clear();
+            txtQty.Clear();
+        }
 
         private void btAdd_Click(object sender, EventArgs e)
         {
@@ -86,6 +89,7 @@ namespace CarWash1
                 cmd.ExecuteNonQuery();
                 cmd.Dispose();
                 GetData();
+                ClearText();
                 MessageBox.Show("A product has been added");
             }catch(Exception ex)
             {
@@ -134,6 +138,7 @@ namespace CarWash1
                 cmd.ExecuteNonQuery();
                 cmd.Dispose();
                 GetData();
+                ClearText();
             }
             catch (Exception ex)
             {
@@ -164,6 +169,11 @@ namespace CarWash1
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void btExit_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

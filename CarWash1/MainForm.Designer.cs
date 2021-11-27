@@ -37,7 +37,10 @@
             this.btIncome = new System.Windows.Forms.Button();
             this.btLogout = new System.Windows.Forms.Button();
             this.labelStaff = new System.Windows.Forms.Label();
+            this.btNewUser = new System.Windows.Forms.Button();
+            this.pictureBoxCreateUser = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCreateUser)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -68,6 +71,7 @@
             // btStaff
             // 
             this.btStaff.BackColor = System.Drawing.Color.Transparent;
+            this.btStaff.Enabled = false;
             this.btStaff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btStaff.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btStaff.ForeColor = System.Drawing.Color.Red;
@@ -96,6 +100,7 @@
             // btExpense
             // 
             this.btExpense.BackColor = System.Drawing.Color.Transparent;
+            this.btExpense.Enabled = false;
             this.btExpense.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btExpense.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btExpense.ForeColor = System.Drawing.Color.Red;
@@ -110,6 +115,7 @@
             // btIncome
             // 
             this.btIncome.BackColor = System.Drawing.Color.Transparent;
+            this.btIncome.Enabled = false;
             this.btIncome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btIncome.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btIncome.ForeColor = System.Drawing.Color.Red;
@@ -146,13 +152,42 @@
             this.labelStaff.TabIndex = 21;
             this.labelStaff.Text = "User :";
             // 
+            // btNewUser
+            // 
+            this.btNewUser.BackColor = System.Drawing.Color.Red;
+            this.btNewUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btNewUser.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btNewUser.ForeColor = System.Drawing.Color.White;
+            this.btNewUser.Location = new System.Drawing.Point(841, 501);
+            this.btNewUser.Name = "btNewUser";
+            this.btNewUser.Size = new System.Drawing.Size(161, 40);
+            this.btNewUser.TabIndex = 23;
+            this.btNewUser.Text = "Create New User";
+            this.btNewUser.UseVisualStyleBackColor = false;
+            this.btNewUser.Visible = false;
+            this.btNewUser.Click += new System.EventHandler(this.btNewUser_Click);
+            // 
+            // pictureBoxCreateUser
+            // 
+            this.pictureBoxCreateUser.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxCreateUser.Image = global::CarWash1.Properties.Resources.Shape_03;
+            this.pictureBoxCreateUser.Location = new System.Drawing.Point(762, 463);
+            this.pictureBoxCreateUser.Name = "pictureBoxCreateUser";
+            this.pictureBoxCreateUser.Size = new System.Drawing.Size(245, 111);
+            this.pictureBoxCreateUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxCreateUser.TabIndex = 22;
+            this.pictureBoxCreateUser.TabStop = false;
+            this.pictureBoxCreateUser.Visible = false;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1004, 541);
+            this.ClientSize = new System.Drawing.Size(1004, 552);
+            this.Controls.Add(this.btNewUser);
+            this.Controls.Add(this.pictureBoxCreateUser);
             this.Controls.Add(this.labelStaff);
             this.Controls.Add(this.btLogout);
             this.Controls.Add(this.btIncome);
@@ -169,6 +204,7 @@
             this.Text = "MainForm";
             this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCreateUser)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -184,5 +220,7 @@
         private System.Windows.Forms.Button btIncome;
         private System.Windows.Forms.Button btLogout;
         private System.Windows.Forms.Label labelStaff;
+        private System.Windows.Forms.Button btNewUser;
+        private System.Windows.Forms.PictureBox pictureBoxCreateUser;
     }
 }

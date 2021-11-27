@@ -56,6 +56,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.txtSalary = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.btSearch = new System.Windows.Forms.Button();
+            this.btRefresh = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridStaff)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -68,7 +70,7 @@
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(437, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(151, 41);
+            this.label6.Size = new System.Drawing.Size(191, 52);
             this.label6.TabIndex = 35;
             this.label6.Text = "STAFF";
             // 
@@ -85,11 +87,7 @@
             this.DataGridStaff.Location = new System.Drawing.Point(417, 95);
             this.DataGridStaff.Name = "DataGridStaff";
             this.DataGridStaff.RowHeadersWidth = 51;
-
-            this.DataGridStaff.Size = new System.Drawing.Size(776, 461);
-
             this.DataGridStaff.Size = new System.Drawing.Size(779, 461);
-
             this.DataGridStaff.TabIndex = 34;
             // 
             // ID
@@ -200,7 +198,7 @@
             this.txtSearch.Location = new System.Drawing.Point(146, 378);
             this.txtSearch.Multiline = true;
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(223, 29);
+            this.txtSearch.Size = new System.Drawing.Size(119, 29);
             this.txtSearch.TabIndex = 27;
             // 
             // label4
@@ -211,7 +209,7 @@
             this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(11, 378);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(73, 27);
+            this.label4.Size = new System.Drawing.Size(90, 33);
             this.label4.TabIndex = 26;
             this.label4.Text = "Search";
             // 
@@ -232,7 +230,7 @@
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(11, 238);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(92, 27);
+            this.label3.Size = new System.Drawing.Size(113, 33);
             this.label3.TabIndex = 24;
             this.label3.Text = "Position ";
             // 
@@ -253,7 +251,7 @@
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(11, 203);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(113, 27);
+            this.label2.Size = new System.Drawing.Size(139, 33);
             this.label2.TabIndex = 22;
             this.label2.Text = "Staff Name";
             // 
@@ -289,11 +287,12 @@
             this.btExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btExit.FlatAppearance.BorderSize = 0;
             this.btExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btExit.Location = new System.Drawing.Point(762, 3);
+            this.btExit.Location = new System.Drawing.Point(1143, 0);
             this.btExit.Name = "btExit";
             this.btExit.Size = new System.Drawing.Size(50, 45);
             this.btExit.TabIndex = 37;
             this.btExit.UseVisualStyleBackColor = false;
+            this.btExit.Click += new System.EventHandler(this.btExit_Click);
             // 
             // txtAddress
             // 
@@ -312,7 +311,7 @@
             this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(11, 273);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(86, 27);
+            this.label5.Size = new System.Drawing.Size(105, 33);
             this.label5.TabIndex = 38;
             this.label5.Text = "Address";
             // 
@@ -333,7 +332,7 @@
             this.label7.ForeColor = System.Drawing.Color.Black;
             this.label7.Location = new System.Drawing.Point(11, 308);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(71, 27);
+            this.label7.Size = new System.Drawing.Size(86, 33);
             this.label7.TabIndex = 40;
             this.label7.Text = "Phone";
             // 
@@ -354,21 +353,49 @@
             this.label8.ForeColor = System.Drawing.Color.Black;
             this.label8.Location = new System.Drawing.Point(11, 343);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(67, 27);
+            this.label8.Size = new System.Drawing.Size(84, 33);
             this.label8.TabIndex = 42;
             this.label8.Text = "Salary";
             // 
+            // btSearch
+            // 
+            this.btSearch.BackColor = System.Drawing.Color.Bisque;
+            this.btSearch.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CadetBlue;
+            this.btSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btSearch.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
+            this.btSearch.ForeColor = System.Drawing.Color.Black;
+            this.btSearch.Location = new System.Drawing.Point(271, 378);
+            this.btSearch.Name = "btSearch";
+            this.btSearch.Size = new System.Drawing.Size(98, 29);
+            this.btSearch.TabIndex = 44;
+            this.btSearch.Text = "Search";
+            this.btSearch.UseVisualStyleBackColor = false;
+            this.btSearch.Click += new System.EventHandler(this.btSearch_Click);
+            // 
+            // btRefresh
+            // 
+            this.btRefresh.BackColor = System.Drawing.Color.Bisque;
+            this.btRefresh.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CadetBlue;
+            this.btRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btRefresh.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold);
+            this.btRefresh.ForeColor = System.Drawing.Color.Black;
+            this.btRefresh.Location = new System.Drawing.Point(121, 556);
+            this.btRefresh.Name = "btRefresh";
+            this.btRefresh.Size = new System.Drawing.Size(155, 41);
+            this.btRefresh.TabIndex = 45;
+            this.btRefresh.Text = "Refresh";
+            this.btRefresh.UseVisualStyleBackColor = false;
+            this.btRefresh.Click += new System.EventHandler(this.btRefresh_Click);
+            // 
             // Staff
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-
-            this.ClientSize = new System.Drawing.Size(1203, 579);
-
-            this.ClientSize = new System.Drawing.Size(1205, 579);
-
+            this.ClientSize = new System.Drawing.Size(1205, 623);
+            this.Controls.Add(this.btRefresh);
+            this.Controls.Add(this.btSearch);
             this.Controls.Add(this.txtSalary);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtPhone);
@@ -431,5 +458,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtSalary;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button btSearch;
+        private System.Windows.Forms.Button btRefresh;
     }
 }

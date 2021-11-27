@@ -55,6 +55,7 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cbSName = new System.Windows.Forms.ComboBox();
             this.checkBoxStaffName = new System.Windows.Forms.CheckBox();
+            this.labelUserNameExist = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -106,6 +107,7 @@
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(250, 23);
             this.txtUser.TabIndex = 23;
+            this.txtUser.TextChanged += new System.EventHandler(this.txtUser_TextChanged);
             // 
             // label2
             // 
@@ -365,12 +367,26 @@
             this.checkBoxStaffName.UseVisualStyleBackColor = false;
             this.checkBoxStaffName.CheckedChanged += new System.EventHandler(this.checkBoxStaffName_CheckedChanged);
             // 
+            // labelUserNameExist
+            // 
+            this.labelUserNameExist.AutoSize = true;
+            this.labelUserNameExist.BackColor = System.Drawing.Color.Transparent;
+            this.labelUserNameExist.Font = new System.Drawing.Font("Eras Bold ITC", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelUserNameExist.ForeColor = System.Drawing.Color.Red;
+            this.labelUserNameExist.Location = new System.Drawing.Point(763, 242);
+            this.labelUserNameExist.Name = "labelUserNameExist";
+            this.labelUserNameExist.Size = new System.Drawing.Size(107, 14);
+            this.labelUserNameExist.TabIndex = 44;
+            this.labelUserNameExist.Text = "Username Exsist";
+            this.labelUserNameExist.Visible = false;
+            // 
             // CreateUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(873, 670);
+            this.Controls.Add(this.labelUserNameExist);
             this.Controls.Add(this.checkBoxStaffName);
             this.Controls.Add(this.cbSName);
             this.Controls.Add(this.DataGridUser);
@@ -438,5 +454,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.ComboBox cbSName;
         private System.Windows.Forms.CheckBox checkBoxStaffName;
+        private System.Windows.Forms.Label labelUserNameExist;
     }
 }

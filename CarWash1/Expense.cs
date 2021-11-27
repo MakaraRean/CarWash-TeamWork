@@ -64,7 +64,7 @@ namespace CarWash1
         private void btSave_Click(object sender, EventArgs e)
         {
             double total = 0;
-            string date = DateTime.Now.ToString("MM/dd/yyyy h:mm tt");
+            string date = DateTime.Now.ToString("MM/dd/yyyy h:mm:ss");
             try
             {
                 //Calulate Total in tbExpenses
@@ -101,6 +101,7 @@ namespace CarWash1
                 cmd.Dispose();
                 reader.Close();
                 DataGridExpense.Rows.Clear();
+                dataGridView1.Rows.Clear();
                 Expense_Load(sender, e);
                 ClearText();
                 MessageBox.Show("Data saved");
@@ -129,11 +130,18 @@ namespace CarWash1
 
                     dataGridView1.Rows.Add(sid, des, date, amount);
                 }
+                cmd.Dispose();
+                reader.Close();
             }
             catch(Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void btExit_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

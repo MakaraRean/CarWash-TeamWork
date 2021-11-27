@@ -10,17 +10,27 @@ namespace CarWash1
             InitializeComponent();
         }
 
-        public MainForm(string staff,int userID)
+        public MainForm(string staff,int userID,string position)
         {
             InitializeComponent();
             this.staff = staff;
             this.userID = userID;
+            this.position = position;
         }
+        string position;
         string staff;
         int userID;
         private void MainForm_Load(object sender, System.EventArgs e)
         {
             labelStaff.Text = staff;
+            if (position == "Manager")
+            {
+                btNewUser.Visible = true;
+                pictureBoxCreateUser.Visible = true;
+                btExpense.Enabled = true;
+                btStaff.Enabled = true;
+                btIncome.Enabled = true;
+            }
         }
 
         private void btDrink_Click(object sender, System.EventArgs e)
@@ -66,6 +76,11 @@ namespace CarWash1
         private void btIncome_Click(object sender, EventArgs e)
         {
             new Income().ShowDialog();
+        }
+
+        private void btNewUser_Click(object sender, EventArgs e)
+        {
+            new CreateUser().ShowDialog();
         }
     }
 }
